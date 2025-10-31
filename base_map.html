@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <!-- add title -->
+    <title>Food Nutrition Indices: Data Visualization</title>
+    
+    <!-- import required libraries here -->
+    <script type="text/javascript" src="../lib/d3.v5.min.js"></script>
+    <script type="text/javascript" src="../lib/d3-dsv.min.js"></script>
+    <script type="text/javascript" src="../lib/topojson.v2.min.js"></script>
+    <script type="text/javascript" src="../lib/d3-tip.min.js"></script>
+    <script type="text/javascript" src="../lib/d3-legend.min.js"></script>
+    <script type="text/javascript" src="../lib/d3-geo-projection.v2.min.js"></script>
+</head>
+
+
+<body>
+    <!-- Add heading for the visualization -->
+    <h2>Food Nutrition Indices: Data Visualization</h2>
+    
+
+    <script>
+    
+        // enter code to define margin and dimensions for svg
+        const margin = {top: 50, right: 20, bottom: 50, left: 20};
+        const width = 1200 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+        
+        // enter code to create svg
+        const svg1 = d3.select('body').append('svg')
+            .attr('width', width + margin.left + margin.right)
+            .attr('height', height + margin.top + margin.bottom)
+            .attr('id', 'choropleth')
+            
+
+        const svg = svg1.append('g')
+            .attr('id', 'countries')
+            .attr('transform', `translate(${margin.left},${margin.top})`);
+
+        var projection = d3.geoNaturalEarth()
+            .scale(200)
+            .translate([width / 2 - 100, height / 1.5 - 100]);
+        var path = d3.geoPath().projection(projection);
+
+        Promise.all([ 
+            // enter code to read files
+            d3.json('./data/world_countries.json'),
+
+        ]).then(
+            // enter code to call ready() with required arguments
+            (data) => {
+                ready(null, data[0]);
+            }
+        );
+        
+        // this function should be called once the data from files have been read
+        // world: topojson from world_countries.json
+        function ready(error, world) {
+            // create Choropleth with default option. Call createMapAndLegend() with required arguments.
+            createMapAndLegend(world);
+        }
+
+        // this function should create a Choropleth map
+        function createMapAndLegend(world){ 
+            svg.selectAll("path").remove();
+
+            svg.selectAll("path")
+                .data(world.features)
+                .enter()
+                .append("path")
+                .attr("d", path)
+                .attr("fill", "#ccc")
+                .attr("stroke", "#333")
+                .attr("stroke-width", 0.5)
+        }
+    </script>
+</body>
+
+</html>
