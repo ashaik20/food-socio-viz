@@ -102,10 +102,19 @@
     <div class="container">
         <!-- Add heading for the visualization -->
         <h2>Food Nutrition Indices: Data Visualization</h2>
+        <div style="display:flex;justify-content:center;gap:8px;margin-bottom:16px;font-size:14px;">
+            <label for="metric-select" style="font-weight:600;color:#0b3d91;">Metric:</label>
+            <select id="metric-select" style="min-width:190px;padding:6px 10px;border-radius:6px;border:1px solid #cdd3de;">
+                <option value="nutrition" selected>Nutrition Score</option>
+                <option value="protein">Protein</option>
+                <option value="fat">Fat</option>
+                <option value="carbohydrates">Carbs</option>
+            </select>
+        </div>
 
         <label for="colorMode">Color Mode:</label>
         <select id="colorMode">
-            <option value="nutrition">Nutrition Score</option>
+            <option value="nutrition">Individual</option>
             <option value="cluster">Cluster</option>
         </select>
     
@@ -128,7 +137,7 @@
             .style('display', 'flex')
             .style('flex-direction', 'column');
 
-        const defaultInfoMessage = 'Hover over a country or scatter point to see details.';
+        const defaultInfoMessage = 'Hover over a country or scatter point to see details. Use the dropdown to switch metrics.';
         const infoPanel = mapWrapper.append('div')
             .attr('id', 'map-info')
             .style('padding', '8px 12px')
@@ -171,25 +180,60 @@
 
         const scatterGroup = scatterSvg.append('g')
             .attr('transform', `translate(${scatterMargin.left},${scatterMargin.top})`);
+        const xScale = d3.scaleLog().range([0, scatterWidth]);
+        const yScale = d3.scaleLinear().range([scatterHeight, 0]);
+        const scatterXAxis = scatterGroup.append('g')
+            .attr('class', 'x-axis')
+            .attr('transform', `translate(0,${scatterHeight})`);
+        const scatterYAxis = scatterGroup.append('g')
+            .attr('class', 'y-axis');
+        scatterGroup.append('text')
+            .attr('x', scatterWidth / 2)
+            .attr('y', scatterHeight + scatterMargin.bottom - 25)
+            .attr('text-anchor', 'middle')
+            .text('GDP per capita (PPP)');
+        const scatterYLabel = scatterGroup.append('text')
+            .attr('transform', 'rotate(-90)')
+            .attr('x', -scatterHeight / 2)
+            .attr('y', -scatterMargin.left + 20)
+            .attr('text-anchor', 'middle')
+            .text('Nutrition Score Rank');
 
         const gdpFormat = d3.format(',.0f');
+        const metricFormatters = {
+            nutrition: d3.format('.2f'),
+            default: d3.format(',.0f')
+        };
+        let selectedMetric = 'nutrition';
+        let metricStates = {};
+        let currentMetricState = null;
         let mapPaths = null;
         let scatterDots = null;
+        let scatterData = [];
         let countryInfo = {};
-        // hoisted globals so other functions (highlightCountry, handlers) can access
         let currentColorMode = 'nutrition';
         let clusterMap = {};
+        let tooltip = null;
 
         function updateInfoPanel(iso, fallbackName) {
-            const info = iso ? countryInfo[iso] : null;
-            if (!info) {
+            if (!iso || !currentMetricState) {
                 infoPanel.html(defaultInfoMessage);
                 return;
             }
+            const info = countryInfo[iso] || {};
             const name = info.name || fallbackName || 'Unknown';
-            const scoreText = info.score !== undefined ? info.score.toFixed(2) : 'N/A';
-            const gdpText = info.gdp ? gdpFormat(info.gdp) : 'N/A';
-            infoPanel.html(`<strong>${name}</strong><br/>Nutrition Score: ${scoreText}<br/>GDP per capita: ${gdpText}`);
+            const metric = currentMetricState;
+            const value = metric.values[iso];
+            const rank = metric.ranks[iso];
+            if (selectedMetric === 'nutrition') {
+                const scoreText = value != null ? metric.formatter(value) : 'N/A';
+                const gdpText = info.gdp ? gdpFormat(info.gdp) : 'N/A';
+                infoPanel.html(`<strong>${name}</strong><br/>Nutrition Score: ${scoreText}<br/>GDP per capita: ${gdpText}`);
+            } else if (rank != null) {
+                infoPanel.html(`<strong>${name}</strong><br/>${metric.label} Rank: #${rank}`);
+            } else {
+                infoPanel.html(`<strong>${name}</strong><br/>No data for selected metric.`);
+            }
         }
 
         function highlightCountry(iso, fallbackName) {
@@ -206,7 +250,7 @@
                 scatterDots
                     .attr('r', d => d.iso === iso ? 6 : 4)
                     .attr('fill', d => {
-                        if (d.iso === iso) return '#ff9900'; // orange for hovered country
+                        if (d.iso === iso) return '#ff9900'; // should be vibrant orange for hovered country
                         if (currentColorMode === 'nutrition') return '#2c7fb8';
                         if (currentColorMode === 'cluster') return clusterMap[d.iso] ? clusterMap[d.iso].color : '#ccc';
                         return '#ccc';
@@ -215,6 +259,31 @@
                     .attr('stroke', d => d.iso === iso ? 'black' : '#333')
             }
             updateInfoPanel(iso, fallbackName);
+        }
+
+        function showTooltip(evt, iso) {
+            if (!currentMetricState) return;
+            const metric = currentMetricState;
+            const value = metric.values[iso];
+            const rank = metric.ranks[iso];
+            let content = '';
+            if (selectedMetric === 'nutrition') {
+                content = value != null ? `${metric.label}: ${metric.formatter(value)}` : '';
+            } else if (rank != null) {
+                content = `${metric.label} Rank: #${rank}`;
+            }
+            if (!content) {
+                tooltip.style('opacity', 0);
+                return;
+            }
+            tooltip
+                .style('opacity', 0.95)
+                .html(content)
+                .style('left', `${evt.pageX + 12}px`)
+                .style('top', `${evt.pageY - 28}px`);
+        }
+        function hideTooltip() {
+            tooltip.style('opacity', 0);
         }
 
         function loadGdpData(path) {
@@ -234,30 +303,39 @@
             d3.json('./data/world_countries.json'),
             d3.csv('./data/country_nutrition_scores.csv'),
             loadGdpData('./data/API_NY.GDP.PCAP.PP.CD_DS2_en_csv_v2_254072.csv'),
+            d3.csv('./data/country_nutrient_totals.csv'),
             d3.csv('./data/area_cluster_colors.csv')
-        ]).then(([world, nutritionScores, gdpRows, clusterCountries]) => {
-            ready(world, nutritionScores, gdpRows, clusterCountries);
+        ]).then(([world, nutritionScores, gdpRows, nutrientTotals, clusterCountries]) => {
+            ready(world, nutritionScores, gdpRows, nutrientTotals, clusterCountries);
         });
         
         // this function should be called once the data from files have been read
         // world: topojson from world_countries.json
-        function ready(world, nutritionScores, gdpRows, clusterCountries) {
-            const nutrMap = {};
-            nutritionScores.forEach(d => {
-                nutrMap[d.ISO3] = +d['Nutrition Score'];
+        function ready(world, nutritionScores, gdpRows, nutrientTotals, clusterCountries) {
+            const nutrMap = buildValueMap(nutritionScores, d => +d['Nutrition Score']);
+            const isoLookup = nutritionScores.reduce((acc, d) => {
+                acc[d.Area] = d.ISO3;
+                return acc;
+            }, {});
+            const isoNutrients = {};
+            nutrientTotals.forEach(row => {
+                const iso = isoLookup[row.Area];
+                if (!iso) return;
+                isoNutrients[iso] = row;
             });
-
+            const proteinValues = buildNutrientValues(isoNutrients, 'Protein');
+            const fatValues = buildNutrientValues(isoNutrients, 'Fat');
+            const carbValues = buildNutrientValues(isoNutrients, 'Carbohydrates');
+            registerMetric('nutrition', 'Nutrition Score', nutrMap, metricFormatters.nutrition);
+            registerMetric('protein', 'Protein', proteinValues);
+            registerMetric('fat', 'Fat', fatValues);
+            registerMetric('carbohydrates', 'Carbohydrates', carbValues);
             const gdpMap = buildGdpMap(gdpRows);
             countryInfo = nutritionScores.reduce((acc, d) => {
-                acc[d.ISO3] = {
-                    name: d.Area,
-                    score: +d['Nutrition Score'],
-                    gdp: gdpMap[d.ISO3]
-                };
+                acc[d.ISO3] = { name: d.Area, score: nutrMap[d.ISO3], gdp: gdpMap[d.ISO3] };
                 return acc;
             }, {});
 
-            // populate hoisted clusterMap
             clusterMap = {};
             clusterCountries.forEach(d => {
                 clusterMap[d.ISO3] = {
@@ -265,6 +343,7 @@
                     color: d.Cluster_Color
                 };
             });
+            currentMetricState = metricStates[selectedMetric];
             createMapAndLegend(world, nutrMap, gdpMap);
             createScatterPlot(nutritionScores, gdpMap);
             d3.select("#colorMode").on("change", function() {
@@ -285,7 +364,7 @@
                         .attr('fill', '#2c7fb8')
                         .attr('opacity', 0.75);
 
-                    createLegendNutrition(nutrMap);
+                    createLegendNutrition(metricStates['nutrition']);
                     
                 } else if (currentColorMode === "cluster") {
                     mapPaths
@@ -304,8 +383,57 @@
                     createLegendCluster(clusterMap);
                 }
             });
+            renderMetric();
+            d3.select('#metric-select').on('change', function() {
+                selectedMetric = this.value;
+                currentMetricState = metricStates[selectedMetric];
+                renderMetric();
+            });
         }
 
+        function buildValueMap(rows, accessor) {
+            return rows.reduce((acc, row) => {
+                const value = accessor(row);
+                if (!isNaN(value)) {
+                    acc[row.ISO3] = value;
+                }
+                return acc;
+            }, {});
+        }
+        function buildNutrientValues(isoNutrients, column) {
+            const result = {};
+            Object.entries(isoNutrients).forEach(([iso, row]) => {
+                const value = +row[column];
+                if (!isNaN(value)) {
+                    result[iso] = value;
+                }
+            });
+            return result;
+        }
+        function registerMetric(id, label, values, formatter = metricFormatters.default) {
+            const extentValues = Object.values(values).filter(v => v != null && !isNaN(v));
+            const extent = extentValues.length ? d3.extent(extentValues) : [0, 1];
+            if (extent[0] === extent[1]) {
+                extent[1] = extent[0] + 1;
+            }
+            const { ranks, maxRank } = createRanking(values);
+            metricStates[id] = { id, label, values, ranks, extent, maxRank, formatter };
+        }
+        function createRanking(values) {
+            const entries = Object.entries(values).filter(([, v]) => v != null && !isNaN(v));
+            entries.sort((a, b) => b[1] - a[1]);
+            const ranks = {};
+            let prevValue = null;
+            let currentRank = 0;
+            entries.forEach(([iso, value], idx) => {
+                if (value !== prevValue) {
+                    currentRank = idx + 1;
+                    prevValue = value;
+                }
+                ranks[iso] = currentRank;
+            });
+            return { ranks, maxRank: entries.length };
+        }
         function buildGdpMap(rows) {
             const gdpMap = {};
             rows.forEach(row => {
@@ -328,8 +456,7 @@
             const color = d3.scaleSequential()
                 .domain(d3.extent(Object.values(nutrMap)))
                 .interpolator(d3.interpolateYlGnBu);
-            // ensure tooltip exists (create once)
-            let tooltip = d3.select("body").select(".tooltip");
+            tooltip = d3.select("body").select(".tooltip");
             if (tooltip.empty()) {
                 tooltip = d3.select("body").append("div")
                     .attr("class", "tooltip")
@@ -362,52 +489,78 @@
                 .on("mouseover", function(d) {
                     const iso = d.id;
                     highlightCountry(iso, d.properties.name);
-                    // show tooltip near mouse
-                    const score = (nutrMap[d.id] !== undefined) ? nutrMap[d.id].toFixed(2) : 'N/A';
+                    const evt = d3.event;
+                    showTooltip(evt, iso);
                 })
-                .on("mouseout", function() {
+                .on('mousemove', function(d) {
+                    const evt = d3.event;
+                    showTooltip(evt, d.id);
+                })
+                .on('mouseout', function() {
                     highlightCountry(null);
+                    hideTooltip();
                 });
         }
-
-        function createLegendNutrition(nutrMap) {
-            svg.selectAll('.legend').remove();
-
-            const values = Object.values(nutrMap).filter(v => v != null && !isNaN(v));
-            let minVal = 0, maxVal = 100;
-            if (values.length > 0) {
-                const extent = d3.extent(values);
-                minVal = extent[0];
-                maxVal = extent[1];
+        function getColorScale(metricState) {
+            return d3.scaleSequential()
+                .domain(metricState.extent)
+                .interpolator(d3.interpolateYlGnBu);
+        }
+        function updateMapColors(metricState) {
+            if (!mapPaths) return;
+            if (currentColorMode === 'cluster') {
+                mapPaths.attr('fill', function(d) {
+                    const fill = clusterMap[d.id] ? clusterMap[d.id].color : '#ccc';
+                    this._defaultFill = fill;
+                    return fill;
+                });
+                return;
             }
+            const color = getColorScale(metricState);
+            mapPaths.attr('fill', function(d) {
+                const value = metricState.values[d.id];
+                const fill = value != null && !isNaN(value) ? color(value) : '#ccc';
+                this._defaultFill = fill;
+                return fill;
+            });
+        }
+        function updateLegend(metricState) {
+            svg.selectAll('.legend').remove();
+            svg.select('#legend-gradient').remove();
+            if (!metricState) return;
+            if (currentColorMode === 'cluster') {
+                createLegendCluster(clusterMap);
+            } else {
+                createLegendNutrition(metricState);
+            }
+        }
 
-            const color = d3.scaleSequential()
-            .domain([minVal, maxVal])
-            .interpolator(d3.interpolateYlGnBu);
+        function createLegendNutrition(metricState) {
+            svg.selectAll('.legend').remove();
+            svg.select('#legend-gradient').remove();
+            if (!metricState) return;
 
-            // Create defs + linearGradient
-            // Vertical legend on the right
-            const defs = svg.append('defs');
+            const color = getColorScale(metricState);
+            const extent = metricState.extent;
 
-            // vertical gradient
+            const defs = svg.select('defs').empty() ? svg.append('defs') : svg.select('defs');
+            defs.select('#legend-gradient').remove();
+
             const gradient = defs.append('linearGradient')
                 .attr('id', 'legend-gradient')
-                .attr('x1', '0%')
-                .attr('x2', '0%')
-                .attr('y1', '100%')
-                .attr('y2', '0%');
+                .attr('x1', '0%').attr('x2', '0%').attr('y1', '100%').attr('y2', '0%');
 
             const stops = [0, 0.25, 0.5, 0.75, 1];
-            stops.forEach(function(t) {
+            stops.forEach(t => {
+                const value = extent[0] + t * (extent[1] - extent[0]);
                 gradient.append('stop')
                     .attr('offset', `${t * 100}%`)
-                    .attr('stop-color', color(minVal + t * (maxVal - minVal)));
+                    .attr('stop-color', color(value));
             });
 
-            // larger, inside legend so it's visible against map
-            const legendWidth = 40;
             const legendHeight = Math.min(300, height * 0.75);
-            const legendX = Math.max( width - 160, width - legendWidth - 40 );
+            const legendWidth = 40;
+            const legendX = Math.max(width - 160, width - legendWidth - 60);
             const legendY = (height - legendHeight) / 2 - 100;
 
             const legendG = svg.append('g')
@@ -416,7 +569,7 @@
                 .attr('pointer-events', 'none')
                 .style('filter', 'url(#legend-drop)');
 
-            // background panel to increase contrast
+            // background panel
             legendG.append('rect')
                 .attr('x', -12)
                 .attr('y', -18)
@@ -439,87 +592,97 @@
                 .style('rx', 3)
                 .style('ry', 3);
 
-            // Vertical tick labels (top = max)
-            const numTicks = 5;
-            const tickValues = d3.range(numTicks).map(i => Math.round(minVal + i * (maxVal - minVal) / (numTicks - 1)));
+            const showNumericTicks = metricState.id === 'nutrition';
+            if (showNumericTicks) {
+                const ticks = 5;
+                const formatter = metricState.formatter || metricFormatters.default;
+                d3.range(ticks).forEach(i => {
+                    const frac = i / (ticks - 1);
+                    const value = extent[0] + frac * (extent[1] - extent[0]);
+                    legendG.append('text')
+                        .attr('x', legendWidth + 12)
+                        .attr('y', (1 - frac) * legendHeight + 5)
+                        .style('font-size', '13px')
+                        .style('font-weight', 600)
+                        .text(formatter(value));
+                });
+            } else {
+                const minRank = metricState.maxRank || Math.round(extent[0]);
+                // min rank
+                legendG.append('text')
+                    .attr('x', legendWidth + 12)
+                    .attr('y', legendHeight + 6)
+                    .style('font-size', '13px')
+                    .style('font-weight', 600)
+                    .text(`#${minRank}`);
+                // rank 1
+                legendG.append('text')
+                    .attr('x', legendWidth + 12)
+                    .attr('y', 10)
+                    .style('font-size', '13px')
+                    .style('font-weight', 600)
+                    .text('#1');
+            }
 
-            legendG.selectAll('text.tick')
-                .data(tickValues)
-                .enter()
-                .append('text')
-                .attr('class', 'tick')
-                .attr('x', legendWidth + 12)
-                .attr('y', (d, i) => {
-                    const frac = i / (numTicks - 1);
-                    return (1 - frac) * legendHeight + 5;
-                })
-                .attr('text-anchor', 'start')
-                .style('font-size', '13px')
-                .style('font-weight', 600)
-                .style('fill', '#041127')
-                .text(d => d);
-
-            // Legend title
             legendG.append('text')
-                .attr('x', legendWidth - 60)
-                .attr('y', -25)
-                .attr('text-anchor', 'start')
+                .attr('x', legendWidth / 2 + 25)
+                .attr('y', -30)
+                .attr('text-anchor', 'middle')
                 .style('font-size', '13px')
                 .style('font-weight', '700')
-                .style('fill', '#041127')
-                .text('Nutrition Score');
+                .text(metricState.label);
+        }
+
+        function updateScatterPlot(metricState) {
+            if (!scatterDots || !metricState) return;
+            const maxRank = metricState.maxRank || 1;
+            yScale.domain([maxRank, 1]);
+            scatterDots.transition().duration(600)
+                .attr('cx', d => xScale(d.gdp))
+                .attr('cy', d => {
+                    const rank = metricState.ranks[d.iso];
+                    return rank ? yScale(rank) : scatterHeight;
+                })
+                .attr('fill', d => {
+                    if (currentColorMode === 'cluster') return clusterMap[d.iso] ? clusterMap[d.iso].color : '#ccc';
+                    return '#2c7fb8';
+                })
+                .attr('opacity', currentColorMode === 'cluster' ? 0.85 : 0.75);
+
+            scatterYAxis.call(d3.axisLeft(yScale).ticks(6));
+        }
+
+        function renderMetric() {
+            if (!currentMetricState) return;
+            updateMapColors(currentMetricState);
+            updateLegend(currentMetricState);
+            updateScatterPlot(currentMetricState);
+            updateInfoPanel(null);
+            hideTooltip();
         }
         
         function createScatterPlot(nutritionScores, gdpMap) {
-            const data = nutritionScores
+            scatterData = nutritionScores
                 .map(d => {
-                    const gdp = gdpMap[d.ISO3];
-                    const score = +d['Nutrition Score'];
-                    return (gdp !== undefined && score) ? {
-                        iso: d.ISO3,
-                        name: d.Area,
-                        gdp,
-                        score
-                    } : null;
+                    const rawGdp = gdpMap[d.ISO3];
+                    if (rawGdp == null || rawGdp < 0) return null;
+                    const gdp = Math.min(200000, Math.max(1, rawGdp));
+                    return { iso: d.ISO3, name: d.Area, gdp };
                 })
                 .filter(Boolean);
-
-            const xScale = d3.scaleLog()
-                .domain(d3.extent(data, d => d.gdp))
-                .range([0, scatterWidth])
-                .nice();
-
-            const yScale = d3.scaleLinear()
-                .domain([0, 100])
-                .range([scatterHeight, 0]);
-
-            scatterGroup.append('g')
-                .attr('transform', `translate(0,${scatterHeight})`)
-                .call(d3.axisBottom(xScale).ticks(6, "~s"));
-
-            scatterGroup.append('g')
-                .call(d3.axisLeft(yScale));
-
-            scatterGroup.append('text')
-                .attr('x', scatterWidth / 2)
-                .attr('y', scatterHeight + scatterMargin.bottom - 25)
-                .attr('text-anchor', 'middle')
-                .text('GDP per capita (PPP)');
-
-            scatterGroup.append('text')
-                .attr('transform', 'rotate(-90)')
-                .attr('x', -scatterHeight / 2)
-                .attr('y', -scatterMargin.left + 20)
-                .attr('text-anchor', 'middle')
-                .text('Nutrition Score');
-
+            const minGdp = d3.min(scatterData, d => d.gdp) || 1;
+            xScale.domain([Math.min(minGdp, 200000), 200000]).nice();
+            scatterXAxis.call(
+                d3.axisBottom(xScale)
+                    .ticks(6, '~s')
+            );
             scatterDots = scatterGroup.selectAll('.dot')
-                .data(data)
+                .data(scatterData, d => d.iso)
                 .enter()
                 .append('circle')
                 .attr('class', 'dot')
                 .attr('cx', d => xScale(d.gdp))
-                .attr('cy', d => yScale(d.score))
+                .attr('cy', scatterHeight)
                 .attr('r', 4)
                 .attr('fill', '#2c7fb8')
                 .attr('opacity', 0.75)
