@@ -25,16 +25,23 @@ The goal is to reveal how different regions’ nutrition levels relate to their 
 
 ## Setup
 
-1. Clone the repository:
+1. Download the original food supply intake dataset from the [main FAOStat site](https://bulks-faostat.fao.org/production/SUA_Crops_Livestock_E_All_Data.zip) and place the datatset within the `data` folder.
+2. Clone the repository:
    ```bash
    git clone https://github.com/ashaik20/food-socio-viz.git
    cd food-socio-viz
    ```
-2. Start a python server:
+3. Setup a Conda environment from the project root and then activate it:
+   ```
+   conda env create -f environment.yml
+   conda activate food_socio_viz
+   ```
+4. Click Run-all for both `FAOSTAT_full.ipynb` and `Country-Clustering.ipynb` to generate the required dataset files using this conda environment. This will generate the required dataset files for the map visualization.
+5. Start a python server:
    ```bash
    python -m http.server 8000
    ```
-3. Navigate to [http://[::1]:8000/](http://[::1]:8000/) and click `base_map.html` from which the map will be visible
+6. Navigate to [http://[::1]:8000/](http://[::1]:8000/) and click `base_map.html` from which the map will be visible
 
 ## Data Sources
 

@@ -1,0 +1,17 @@
+name: food_socio_viz
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - pycountry
+  - ipykernel
+  - pip
+  - pip:
+      - pathlib
+      - json5 # Usually optional

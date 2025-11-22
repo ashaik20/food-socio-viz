@@ -45,33 +45,87 @@
         Promise.all([ 
             // enter code to read files
             d3.json('./data/world_countries.json'),
+            d3.csv('./data/country_nutrition_scores.csv')
 
         ]).then(
             // enter code to call ready() with required arguments
-            (data) => {
-                ready(null, data[0]);
+            ([world, nutritionScores]) => {
+                ready(world, nutritionScores);
             }
         );
         
         // this function should be called once the data from files have been read
         // world: topojson from world_countries.json
-        function ready(error, world) {
+        function ready(world, nutritionScores) {
             // create Choropleth with default option. Call createMapAndLegend() with required arguments.
-            createMapAndLegend(world);
+
+            const nutrMap = {};
+            nutritionScores.forEach(d => {
+                nutrMap[d.ISO3] = +d['Nutrition Score'];
+            });
+
+            createMapAndLegend(world, nutrMap);
         }
 
         // this function should create a Choropleth map
-        function createMapAndLegend(world){ 
+        function createMapAndLegend(world, nutrMap){ 
             svg.selectAll("path").remove();
+
+            const color = d3.scaleSequential()
+                .domain(d3.extent(Object.values(nutrMap)))
+                .interpolator(d3.interpolateYlGnBu);
+
+            // Create a single tooltip div (don't append multiple times on re-render)
+            let tooltip = d3.select("body").select(".tooltip");
+            if (tooltip.empty()) {
+                tooltip = d3.select("body").append("div")
+                    .attr("class", "tooltip")
+                    .style("position", "absolute")
+                    .style("padding", "6px 10px")
+                    .style("background", "white")
+                    .style("border", "1px solid #ccc")
+                    .style("border-radius", "4px")
+                    .style("pointer-events", "none")
+                    .style("opacity", 0)
+                    .style("z-index", 9999)
+                    .style("max-width", "300px");
+            }
 
             svg.selectAll("path")
                 .data(world.features)
                 .enter()
                 .append("path")
                 .attr("d", path)
-                .attr("fill", "#ccc")
+                .attr("fill", d => {
+                    const score = nutrMap[d.id];
+                    return score !== undefined ? color(score) : "#ccc";
+                })
                 .attr("stroke", "#333")
                 .attr("stroke-width", 0.5)
+                .on("mouseover", function(d) {
+                    const score = nutrMap[d.id];
+                    const px = d3.event && d3.event.pageX ? d3.event.pageX : 0;
+                    const py = d3.event && d3.event.pageY ? d3.event.pageY : 0;
+                    tooltip.transition().duration(200).style("opacity", 0.9);
+                    tooltip.html(`<strong>${d.properties.name}</strong><br/>Nutrition Score: ${score !== undefined ? score : 'N/A'}`)
+                        .style("left", (px + 10) + "px")
+                        .style("top", (py - 28) + "px");
+                })
+                .on("mouseout", function() {
+                    tooltip.transition().duration(500).style("opacity", 0);
+                });
+
+            const legend = d3.legendColor()
+                .shapeWidth(30)
+                .cells(10)
+                .orient('horizontal')
+                .scale(color)
+                .title("Nutrition Score");
+        
+            svg.append("g")
+                .attr("class", "legend")
+                .attr("transform", `translate(0, ${height + margin.bottom - 10})`)
+                .call(legend);
         }
     </script>
 </body>
