@@ -102,6 +102,12 @@
     <div class="container">
         <!-- Add heading for the visualization -->
         <h2>Food Nutrition Indices: Data Visualization</h2>
+
+        <label for="colorMode">Color Mode:</label>
+        <select id="colorMode">
+            <option value="nutrition">Nutrition Score</option>
+            <option value="cluster">Cluster</option>
+        </select>
     
 
     <script>
@@ -170,6 +176,9 @@
         let mapPaths = null;
         let scatterDots = null;
         let countryInfo = {};
+        // hoisted globals so other functions (highlightCountry, handlers) can access
+        let currentColorMode = 'nutrition';
+        let clusterMap = {};
 
         function updateInfoPanel(iso, fallbackName) {
             const info = iso ? countryInfo[iso] : null;
@@ -187,8 +196,8 @@
             if (mapPaths) {
                 mapPaths
                     .attr('stroke-width', d => d.id === iso ? 3 : 0.6)
-                    .attr('stroke', d => d.id === iso ? '#ff6f00' : '#333')
-                    .attr('opacity', d => !iso || d.id === iso ? 1 : 0.5);
+                    .attr('stroke', d => d.id === iso ? 'black' : '#333')
+                    .attr('fill', function(d) { return d.id === iso ? '#ff9900' : (this._defaultFill || '#ccc'); })
                 if (iso) {
                     mapPaths.filter(d => d.id === iso).raise();
                 }
@@ -196,8 +205,14 @@
             if (scatterDots) {
                 scatterDots
                     .attr('r', d => d.iso === iso ? 6 : 4)
-                    .attr('fill', d => d.iso === iso ? '#d7301f' : '#2c7fb8')
-                    .attr('opacity', d => !iso || d.iso === iso ? 0.9 : 0.35);
+                    .attr('fill', d => {
+                        if (d.iso === iso) return '#ff9900'; // orange for hovered country
+                        if (currentColorMode === 'nutrition') return '#2c7fb8';
+                        if (currentColorMode === 'cluster') return clusterMap[d.iso] ? clusterMap[d.iso].color : '#ccc';
+                        return '#ccc';
+                    })
+                    .attr('stroke-width', d => d.iso === iso ? 2 : 0.6)
+                    .attr('stroke', d => d.iso === iso ? 'black' : '#333')
             }
             updateInfoPanel(iso, fallbackName);
         }
@@ -218,14 +233,15 @@
         Promise.all([
             d3.json('./data/world_countries.json'),
             d3.csv('./data/country_nutrition_scores.csv'),
-            loadGdpData('./data/API_NY.GDP.PCAP.PP.CD_DS2_en_csv_v2_254072.csv')
-        ]).then(([world, nutritionScores, gdpRows]) => {
-            ready(world, nutritionScores, gdpRows);
+            loadGdpData('./data/API_NY.GDP.PCAP.PP.CD_DS2_en_csv_v2_254072.csv'),
+            d3.csv('./data/area_cluster_colors.csv')
+        ]).then(([world, nutritionScores, gdpRows, clusterCountries]) => {
+            ready(world, nutritionScores, gdpRows, clusterCountries);
         });
         
         // this function should be called once the data from files have been read
         // world: topojson from world_countries.json
-        function ready(world, nutritionScores, gdpRows) {
+        function ready(world, nutritionScores, gdpRows, clusterCountries) {
             const nutrMap = {};
             nutritionScores.forEach(d => {
                 nutrMap[d.ISO3] = +d['Nutrition Score'];
@@ -240,8 +256,54 @@
                 };
                 return acc;
             }, {});
+
+            // populate hoisted clusterMap
+            clusterMap = {};
+            clusterCountries.forEach(d => {
+                clusterMap[d.ISO3] = {
+                    cluster: d.Cluster,
+                    color: d.Cluster_Color
+                };
+            });
             createMapAndLegend(world, nutrMap, gdpMap);
             createScatterPlot(nutritionScores, gdpMap);
+            d3.select("#colorMode").on("change", function() {
+                currentColorMode = d3.select(this).property("value");
+                
+                if (currentColorMode === "nutrition") {
+                    mapPaths
+                        .transition().duration(400)
+                        .attr("fill", function(d) {
+                            const score = nutrMap[d.id];
+                            const fillVal = score !== undefined ? d3.interpolateYlGnBu(score / 100) : "#ccc";
+                            this._defaultFill = fillVal;
+                            return fillVal;
+                        });
+
+                    scatterDots
+                        .transition().duration(400)
+                        .attr('fill', '#2c7fb8')
+                        .attr('opacity', 0.75);
+
+                    createLegendNutrition(nutrMap);
+                    
+                } else if (currentColorMode === "cluster") {
+                    mapPaths
+                        .transition().duration(400)
+                        .attr("fill", function(d) {
+                            const fillVal = clusterMap[d.id] ? clusterMap[d.id].color : "#ccc";
+                            this._defaultFill = fillVal;
+                            return fillVal;
+                        });
+
+                    scatterDots
+                        .transition().duration(400)
+                        .attr('fill', d => clusterMap[d.iso] ? clusterMap[d.iso].color : '#ccc')
+                        .attr('opacity', 0.85);
+
+                    createLegendCluster(clusterMap);
+                }
+            });
         }
 
         function buildGdpMap(rows) {
@@ -261,7 +323,7 @@
 
         // this function should create a Choropleth map
         function createMapAndLegend(world, nutrMap, gdpMap){ 
-            svg.selectAll("path").remove();
+            svg.selectAll("*").remove();
 
             const color = d3.scaleSequential()
                 .domain(d3.extent(Object.values(nutrMap)))
@@ -288,12 +350,15 @@
                 .enter()
                 .append("path")
                 .attr("d", path)
-                .attr("fill", d => {
-                    const score = nutrMap[d.id];
-                    return score !== undefined ? color(score) : "#ccc";
-                })
                 .attr("stroke", "#333")
                 .attr("stroke-width", 0.5)
+                .each(function(d) {
+                    const score = nutrMap[d.id];
+                    const fillVal = score !== undefined ? color(score) : "#ccc";
+                    d.defaultFill = fillVal;
+                    this._defaultFill = fillVal;
+                })
+                .attr("fill", function(d) { return this._defaultFill || '#ccc'; })
                 .on("mouseover", function(d) {
                     const iso = d.id;
                     highlightCountry(iso, d.properties.name);
@@ -303,9 +368,11 @@
                 .on("mouseout", function() {
                     highlightCountry(null);
                 });
- 
+        }
 
-            // Build a continuous gradient legend (centered) with numeric ticks.
+        function createLegendNutrition(nutrMap) {
+            svg.selectAll('.legend').remove();
+
             const values = Object.values(nutrMap).filter(v => v != null && !isNaN(v));
             let minVal = 0, maxVal = 100;
             if (values.length > 0) {
@@ -314,29 +381,21 @@
                 maxVal = extent[1];
             }
 
-            
+            const color = d3.scaleSequential()
+            .domain([minVal, maxVal])
+            .interpolator(d3.interpolateYlGnBu);
 
             // Create defs + linearGradient
             // Vertical legend on the right
             const defs = svg.append('defs');
-
-            // subtle drop shadow for legend
-            const filter = defs.append('filter')
-                .attr('id', 'legend-drop')
-                .attr('height', '140%');
-            filter.append('feOffset').attr('in', 'SourceAlpha').attr('dx', 0).attr('dy', 2).attr('result', 'off');
-            filter.append('feGaussianBlur').attr('in', 'off').attr('stdDeviation', 3).attr('result', 'blur');
-            const feMerge = filter.append('feMerge');
-            feMerge.append('feMergeNode').attr('in', 'blur');
-            feMerge.append('feMergeNode').attr('in', 'SourceGraphic');
 
             // vertical gradient
             const gradient = defs.append('linearGradient')
                 .attr('id', 'legend-gradient')
                 .attr('x1', '0%')
                 .attr('x2', '0%')
-                .attr('y1', '0%')
-                .attr('y2', '100%');
+                .attr('y1', '100%')
+                .attr('y2', '0%');
 
             const stops = [0, 0.25, 0.5, 0.75, 1];
             stops.forEach(function(t) {
@@ -367,7 +426,7 @@
                 .attr('ry', 8)
                 .style('fill', '#ffffff')
                 .style('fill-opacity', 0.92)
-                .style('stroke', '#e6e8eb')
+                .style('stroke', 'black')
                 .style('stroke-width', 1);
 
             // colored gradient bar
@@ -410,7 +469,7 @@
                 .style('fill', '#041127')
                 .text('Nutrition Score');
         }
-
+        
         function createScatterPlot(nutritionScores, gdpMap) {
             const data = nutritionScores
                 .map(d => {
@@ -471,6 +530,99 @@
                     highlightCountry(null);
                 });
         }
+    
+        function createMapAndLegendCluster(world, clusterMap) {
+            svg.selectAll("*").remove(); // clear previous map and legend
+
+            // draw countries
+            mapPaths = svg.selectAll("path")
+                .data(world.features)
+                .enter()
+                .append("path")
+                .attr("d", path)
+                .attr("stroke", "#333")
+                .attr("stroke-width", 0.5)
+                .each(function(d) {
+                    const fillVal = clusterMap[d.id] ? clusterMap[d.id].color : "#ccc";
+                    d.defaultFill = fillVal;
+                    this._defaultFill = fillVal;
+                })
+                .attr("fill", function(d) { return this._defaultFill || '#ccc'; })
+                .on("mouseover", function(d) {
+                    const info = clusterMap[d.id];
+                    const text = info ? `Cluster ${info.cluster}` : "No data";
+                    infoPanel.html(`<strong>${d.properties.name}</strong><br/>${text}`);
+                })
+                .on("mouseout", function() {
+                    infoPanel.html('Hover over a country or scatter point to see details.');
+                });
+        }
+    
+        function createLegendCluster(clusterMap) {
+            svg.selectAll('.legend').remove();
+
+            const clusters = Array.from(new Set(Object.values(clusterMap).map(d => d.cluster))).sort((a, b) => a - b);
+
+            // legend sizing
+            const legendWidth = 40;
+            const legendHeight = clusters.length * 27;
+            const legendX = Math.max(width - 160, width - legendWidth - 80);
+            const legendY = (height - legendHeight) / 2 - 140;
+
+            // legend group
+            const legendG = svg.append('g')
+                .attr('class', 'legend')
+                .attr('transform', `translate(${legendX}, ${legendY})`)
+                .style('filter', 'url(#legend-drop)')
+                .attr('pointer-events', 'none');
+
+            // background panel
+            legendG.append('rect')
+                .attr('x', -12)
+                .attr('y', -18)
+                .attr('width', 150)
+                .attr('height', legendHeight + 36)
+                .attr('rx', 8)
+                .attr('ry', 8)
+                .style('fill', '#ffffff')
+                .style('fill-opacity', 0.92)
+                .style('stroke', 'black')
+                .style('stroke-width', 1);
+
+            // draw rectangles for each cluster
+            clusters.forEach((c, i) => {
+                const color = Object.values(clusterMap).find(d => d.cluster == c).color;
+
+                legendG.append('rect')
+                    .attr('x', 0)
+                    .attr('y', i * 30)
+                    .attr('width', legendWidth)
+                    .attr('height', 20)
+                    .attr('rx', 3)
+                    .attr('ry', 3)
+                    .attr('fill', color)
+                    .style('stroke', '#666')
+                    .style('stroke-width', 1.2);
+
+                legendG.append('text')
+                    .attr('x', legendWidth + 10)
+                    .attr('y', i * 30 + 15)
+                    .text(`Cluster ${c}`)
+                    .style('font-size', '13px')
+                    .style('fill', '#041127')
+                    .style('font-weight', 600);
+            });
+
+            // legend title
+            legendG.append('text')
+                .attr('x', 30)
+                .attr('y', -25)
+                .style('font-weight', '700')
+                .style('font-size', '13px')
+                .style('fill', '#041127')
+                .text('Clusters');
+        }
+
     </script>
     </div>
 </body>
