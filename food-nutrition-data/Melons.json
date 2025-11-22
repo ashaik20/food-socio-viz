@@ -1,0 +1,79 @@
+{
+    "category": "Melons",
+    "product_name": "Melons, cantaloupe, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 746770",
+        "SR Legacy: 169092"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 34.0,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 0.82,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.18,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.051,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 8.16,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 7.88,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 0.8,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 30.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 9.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.38,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 232.0,
+            "unit": "mcg",
+            "source": "Foundation"
+        },
+        "Vitamin C": {
+            "value": 10.9,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

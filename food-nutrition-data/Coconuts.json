@@ -1,0 +1,78 @@
+{
+    "category": "Coconuts",
+    "product_name": "Nuts, coconut meat, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "SR Legacy: 170169"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 354.0,
+            "unit": "kcal",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Protein": {
+            "value": 3.33,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fat": {
+            "value": 33.49,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Saturated Fat": {
+            "value": 29.698,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 15.23,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Sugar": {
+            "value": 6.23,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 9.0,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Sodium": {
+            "value": 20.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 14.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Iron": {
+            "value": 2.43,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin A": {
+            "value": 0.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 3.3,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

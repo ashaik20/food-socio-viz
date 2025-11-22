@@ -1,0 +1,83 @@
+{
+    "category": "Camel Meat",
+    "product_name": "Beef, ground, 80% lean meat / 20% fat, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2514744"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 242.61,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 17.53125,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 19.44,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 6.845,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Carbohydrates": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Sugar": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fiber": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Sodium": {
+            "value": 54.94,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 6.889,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 1.965,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Carbohydrates",
+        "Sugar",
+        "Fiber",
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

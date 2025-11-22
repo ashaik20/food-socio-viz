@@ -1,0 +1,79 @@
+{
+    "category": "Mangoes & Guavas",
+    "product_name": "Mango, Ataulfo, peeled, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2710834",
+        "SR Legacy: 169910"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 78.4665,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 0.6875,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.6813,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.092,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 17.3962,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 11.1,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 1.289,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 1.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 10.02,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.16,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin A": {
+            "value": 54.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 168.1,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

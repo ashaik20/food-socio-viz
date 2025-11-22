@@ -1,0 +1,79 @@
+{
+    "category": "Bananas",
+    "product_name": "Bananas, ripe and slightly ripe, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 1105314",
+        "SR Legacy: 173944"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 97.0,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 0.74,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.29,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.112,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 23.0,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 15.82,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 1.7,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 1.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 5.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.26,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin A": {
+            "value": 1.0,
+            "unit": "mcg",
+            "source": "Foundation"
+        },
+        "Vitamin C": {
+            "value": 12.3,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

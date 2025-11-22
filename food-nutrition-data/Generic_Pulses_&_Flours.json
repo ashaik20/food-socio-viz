@@ -1,0 +1,80 @@
+{
+    "category": "Generic Pulses & Flours",
+    "product_name": "Flour, barley",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2512376",
+        "SR Legacy: 174288"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 366.53,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 8.72168,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 2.45,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.693,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 77.39832,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 10.85,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 12.79,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 20.33,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 35.56,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 3.301,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 2.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

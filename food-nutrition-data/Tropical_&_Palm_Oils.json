@@ -1,0 +1,84 @@
+{
+    "category": "Tropical & Palm Oils",
+    "product_name": "Oil, coconut",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 330458",
+        "SR Legacy: 171015"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 833.0,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fat": {
+            "value": 99.1,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 82.5,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Carbohydrates": {
+            "value": 0.84,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fiber": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Sodium": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Calcium": {
+            "value": 1.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.05,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Protein",
+        "Sugar",
+        "Fiber",
+        "Sodium",
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

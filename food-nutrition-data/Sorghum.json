@@ -1,0 +1,80 @@
+{
+    "category": "Sorghum",
+    "product_name": "Sorghum, whole grain, white, dry, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2710842",
+        "SR Legacy: 169716"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 372.591,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 10.08125,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 4.219,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.61,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 73.57375,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 2.53,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 8.274,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 0.3288,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 14.93,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 3.895,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

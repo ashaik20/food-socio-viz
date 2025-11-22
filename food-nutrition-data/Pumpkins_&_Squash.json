@@ -1,0 +1,79 @@
+{
+    "category": "Pumpkins & Squash",
+    "product_name": "Squash, pie pumpkin, peeled, seeded, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2727578",
+        "SR Legacy: 168472"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 40.0,
+            "unit": "kcal",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Protein": {
+            "value": 0.854375,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.1,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Saturated Fat": {
+            "value": 0.021,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 10.42,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Sugar": {
+            "value": 4.14,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 1.5,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Sodium": {
+            "value": 0.3125,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 16.36,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.06325,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 18.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 10.07,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

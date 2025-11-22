@@ -1,0 +1,82 @@
+{
+    "category": "Generic Beans",
+    "product_name": "Beans, snap, green, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2346400"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 39.9998,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 1.96875,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.275,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Carbohydrates": {
+            "value": 7.41245,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 2.33,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 3.011,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Calcium": {
+            "value": 40.05,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.6516,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Saturated Fat",
+        "Sodium",
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

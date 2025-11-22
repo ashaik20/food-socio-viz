@@ -1,0 +1,79 @@
+{
+    "category": "Yautia",
+    "product_name": "Yautia (tannier), raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "SR Legacy: 169401"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 98.0,
+            "unit": "kcal",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Protein": {
+            "value": 1.46,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fat": {
+            "value": 0.4,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Saturated Fat": {
+            "value": 0.082,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 23.63,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Sugar": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fiber": {
+            "value": 1.5,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Sodium": {
+            "value": 21.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 9.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Iron": {
+            "value": 0.98,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin A": {
+            "value": 8.0,
+            "unit": "IU",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 5.2,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Sugar",
+        "Vitamin D"
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "category": "Cucumbers",
+    "product_name": "Cucumber, with peel, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2346406",
+        "SR Legacy: 168409"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 15.9075,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 0.625,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.1775,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.037,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 2.9525,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 1.67,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 0.5,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Sodium": {
+            "value": 1.515,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 16.34,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.28,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin A": {
+            "value": 5.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 2.8,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

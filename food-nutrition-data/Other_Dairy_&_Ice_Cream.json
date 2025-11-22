@@ -1,0 +1,77 @@
+{
+    "category": "Other Dairy & Ice Cream",
+    "product_name": "Cream, heavy",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2346386",
+        "SR Legacy: 167575"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 343.31,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 2.017994,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 35.56,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 20.45,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Carbohydrates": {
+            "value": 3.799506,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 21.22,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 0.7,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Sodium": {
+            "value": 20.61,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 61.21,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.09,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin A": {
+            "value": 326.6,
+            "unit": "mcg",
+            "source": "Foundation"
+        },
+        "Vitamin C": {
+            "value": 0.6,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin D": {
+            "value": 0.2,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        }
+    },
+    "missing_nutrients": []
+}

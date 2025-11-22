@@ -1,0 +1,80 @@
+{
+    "category": "Tomatoes",
+    "product_name": "Tomatoes, grape, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 321360"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 27.0,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 0.83,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.63,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Carbohydrates": {
+            "value": 5.51,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fiber": {
+            "value": 2.1,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 6.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 11.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.33,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0.0,
+            "unit": "mcg",
+            "source": "Foundation"
+        },
+        "Vitamin C": {
+            "value": 27.2,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Saturated Fat",
+        "Sugar",
+        "Vitamin D"
+    ]
+}

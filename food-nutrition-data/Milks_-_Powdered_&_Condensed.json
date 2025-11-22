@@ -1,0 +1,78 @@
+{
+    "category": "Milks - Powdered & Condensed",
+    "product_name": "Milk, canned, condensed, sweetened",
+    "serving_size": "100g",
+    "data_sources": [
+        "SR Legacy: 171275"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 321.0,
+            "unit": "kcal",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Protein": {
+            "value": 7.91,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fat": {
+            "value": 8.7,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Saturated Fat": {
+            "value": 5.486,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 54.4,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Sugar": {
+            "value": 54.4,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Sodium": {
+            "value": 127.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 284.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Iron": {
+            "value": 0.19,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin A": {
+            "value": 74.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 2.6,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin D": {
+            "value": 0.2,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        }
+    },
+    "missing_nutrients": [
+        "Fiber"
+    ]
+}

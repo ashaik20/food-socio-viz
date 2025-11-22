@@ -1,0 +1,80 @@
+{
+    "category": "Dates",
+    "product_name": "Dates, medjool",
+    "serving_size": "100g",
+    "data_sources": [
+        "SR Legacy: 168191"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 277.0,
+            "unit": "kcal",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Protein": {
+            "value": 1.81,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fat": {
+            "value": 0.15,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Saturated Fat": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Carbohydrates": {
+            "value": 74.97,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Sugar": {
+            "value": 66.47,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 6.7,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Sodium": {
+            "value": 1.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 64.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Iron": {
+            "value": 0.9,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin A": {
+            "value": 7.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Saturated Fat",
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

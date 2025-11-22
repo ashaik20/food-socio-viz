@@ -1,0 +1,82 @@
+{
+    "category": "Poultry Meat",
+    "product_name": "Chicken, breast, meat and skin, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2727569",
+        "SR Legacy: 171106"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 126.905,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 21.40625,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 4.777,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 4.73,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Sugar": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fiber": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Sodium": {
+            "value": 48.07,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 6.898,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.3535,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 45.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 2.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin D": {
+            "value": 1,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Carbohydrates",
+        "Sugar",
+        "Fiber",
+        "Vitamin D"
+    ]
+}

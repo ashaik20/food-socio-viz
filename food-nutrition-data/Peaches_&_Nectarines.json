@@ -1,0 +1,79 @@
+{
+    "category": "Peaches & Nectarines",
+    "product_name": "Peaches, yellow, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 325430",
+        "SR Legacy: 169928"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 42.0,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 0.91,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.27,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.019,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 10.1,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 8.38,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 1.5,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 13.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 4.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.34,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 24.0,
+            "unit": "mcg",
+            "source": "Foundation"
+        },
+        "Vitamin C": {
+            "value": 4.1,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

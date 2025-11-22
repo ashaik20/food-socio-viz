@@ -1,0 +1,81 @@
+{
+    "category": "Millet",
+    "product_name": "Millet, whole grain",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2512379",
+        "SR Legacy: 169702"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 375.618,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 10.02177,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 4.194,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.723,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 74.44623,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fiber": {
+            "value": 2.619,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 5.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 9.105,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 2.534,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Sugar",
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "category": "Oats",
+    "product_name": "Oats, whole grain, steel cut",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2346397"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 381.248,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 12.51118,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 5.8,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Carbohydrates": {
+            "value": 69.75082,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fiber": {
+            "value": 11.95,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 0.3113,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 51.34,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 3.801,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Saturated Fat",
+        "Sugar",
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "category": "Carrots_&_Turnips",
+    "product_name": "Carrots_&_Turnips (Placeholder Name)",
+    "serving_size": "100g",
+    "data_sources": [
+        "Manual Creation"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 48,
+            "unit": "kcal",
+            "source": "Manual Skeleton"
+        },
+        "Protein": {
+            "value": 0.94,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Fat": {
+            "value": 0.35,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Saturated Fat": {
+            "value": 0.032,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Carbohydrates": {
+            "value": 10.3,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Sugar": {
+            "value": 0,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Fiber": {
+            "value": 3.1,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Sodium": {
+            "value": 87,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Calcium": {
+            "value": 30,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Iron": {
+            "value": 0.15,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Vitamin A": {
+            "value": 835,
+            "unit": "mcg",
+            "source": "Manual Skeleton"
+        },
+        "Vitamin C": {
+            "value": 5.9,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Manual Skeleton"
+        }
+    },
+    "missing_nutrients": [
+        
+    ]
+}

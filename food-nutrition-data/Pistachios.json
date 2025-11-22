@@ -1,0 +1,79 @@
+{
+    "category": "Pistachios",
+    "product_name": "Nuts, pistachio nuts, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2515379",
+        "SR Legacy: 170184"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 597.98,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 20.5057,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 45.02,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 5.907,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 27.6943,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 7.66,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 6.969,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 1.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 117.4,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 3.456,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 26.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 5.6,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

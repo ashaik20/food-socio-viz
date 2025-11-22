@@ -1,0 +1,80 @@
+{
+    "category": "Rye",
+    "product_name": "Flour, rye",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2512375",
+        "SR Legacy: 168884"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 359.4,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 8.3952,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 1.908,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.197,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 77.1618,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 0.98,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 13.68,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 2.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 32.24,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 2.536,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 1.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

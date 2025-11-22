@@ -1,0 +1,78 @@
+{
+    "category": "Vetches",
+    "product_name": "Vetches (Placeholder Name)",
+    "serving_size": "100g",
+    "data_sources": [
+        "Manual Creation"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 357,
+            "unit": "kcal",
+            "source": "Manual Skeleton"
+        },
+        "Protein": {
+            "value": 20,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Fat": {
+            "value": 1.0,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Saturated Fat": {
+            "value": 0.15,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Carbohydrates": {
+            "value": 50,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Sugar": {
+            "value": 1.8,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Fiber": {
+            "value": 4.2,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Sodium": {
+            "value": 177,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Calcium": {
+            "value": 108,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Iron": {
+            "value": 41,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Vitamin A": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Manual Skeleton"
+        },
+        "Vitamin C": {
+            "value": 1.4,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Manual Skeleton"
+        }
+    },
+    "missing_nutrients": [
+        
+    ]
+}

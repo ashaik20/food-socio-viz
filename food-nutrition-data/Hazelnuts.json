@@ -1,0 +1,80 @@
+{
+    "category": "Hazelnuts",
+    "product_name": "Nuts, hazelnuts or filberts, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2515375",
+        "SR Legacy: 170581"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 641.39,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 13.4938,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 53.49,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 4.464,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 26.5012,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 4.34,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 8.41,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Calcium": {
+            "value": 134.7,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 3.465,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 1.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 6.3,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Sodium",
+        "Vitamin D"
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "category": "General Food Preparations",
+    "product_name": "Bread, whole-wheat, commercially prepared",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 335240",
+        "SR Legacy: 173731"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 254.0,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 12.3,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 3.55,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.732,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Carbohydrates": {
+            "value": 43.1,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 4.41,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 6.0,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 450.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 163.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 2.56,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 1.1,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

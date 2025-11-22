@@ -1,0 +1,79 @@
+{
+    "category": "Cashews",
+    "product_name": "Nuts, cashew nuts, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2515374",
+        "SR Legacy: 170162"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 564.664,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 17.4423,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 38.86,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 7.783,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 36.2887,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 5.91,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 4.104,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 4.759,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 41.95,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 5.988,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 0.5,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

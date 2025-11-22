@@ -1,0 +1,80 @@
+{
+    "category": "Soy",
+    "product_name": "Flour, soy, full-fat",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 1104766",
+        "SR Legacy: 174275"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 452.0,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 38.6,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 20.7,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.136,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 27.9,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 16.42,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 17.5,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Sodium": {
+            "value": 2.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 258.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 9.51,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 2.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

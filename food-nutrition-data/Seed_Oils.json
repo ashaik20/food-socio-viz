@@ -1,0 +1,80 @@
+{
+    "category": "Seed Oils",
+    "product_name": "Seeds, sunflower seed, kernel, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2515381",
+        "SR Legacy: 170554"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 884,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 0,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 100,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 7.34,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 0,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fiber": {
+            "value": 0,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0,
+            "unit": "IU",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Sugar",
+        "Vitamin D"
+    ]
+}

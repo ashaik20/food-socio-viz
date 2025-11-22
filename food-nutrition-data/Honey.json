@@ -1,0 +1,80 @@
+{
+    "category": "Honey",
+    "product_name": "Honey",
+    "serving_size": "100g",
+    "data_sources": [
+        "SR Legacy: 169640"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 304.0,
+            "unit": "kcal",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Protein": {
+            "value": 0.3,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fat": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Saturated Fat": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Carbohydrates": {
+            "value": 82.4,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Sugar": {
+            "value": 82.12,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 0.2,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Sodium": {
+            "value": 4.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 6.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Iron": {
+            "value": 0.42,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin A": {
+            "value": 0.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 0.5,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Fat",
+        "Saturated Fat",
+        "Vitamin D"
+    ]
+}

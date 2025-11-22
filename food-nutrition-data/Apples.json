@@ -1,0 +1,79 @@
+{
+    "category": "Apples",
+    "product_name": "Apples, fuji, with skin, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 1750340",
+        "SR Legacy: 171689"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 64.6609,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 0.1484375,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.1625,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.021,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 15.6511625,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 13.33,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 2.075,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 1.013,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 5.975,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.015,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 2.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 4.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

@@ -1,0 +1,547 @@
+{
+    "Beers": [
+        "Beer of barley, malted",
+        "Beer of maize, malted",
+        "Beer of millet, malted",
+        "Beer of sorghum, malted",
+        "Rice-fermented beverages"
+    ],
+    "Wines & Fermented Beverages": [
+        "Cider and other fermented beverages",
+        "Vermouth and other wine of fresh grapes flavoured with plats or aromatic substances",
+        "Wine"
+    ],
+    "Spirits": [
+        "Undenatured ethyl alcohol of an alcoholic strength by volume of less than 80% vol; spirits, liqueurs and other spirituous beverages"
+    ],
+    "Milks - Fluid & Raw": [
+        "Raw milk of buffalo",
+        "Raw milk of camel",
+        "Raw milk of cattle",
+        "Raw milk of goats",
+        "Raw milk of sheep",
+        "Skim milk of buffalo",
+        "Skim milk of cows"
+    ],
+    "Milks - Powdered & Condensed": [
+        "Buttermilk, dry",
+        "Skim milk and whey powder",
+        "Skim milk, condensed",
+        "Whole milk powder",
+        "Whole milk, condensed",
+        "Whole milk, evaporated"
+    ],
+    "Butter & Ghee": [
+        "Butter and ghee of sheep milk",
+        "Butter of buffalo milk",
+        "Butter of cow milk",
+        "Butter of goat milk",
+        "Ghee from buffalo milk",
+        "Ghee from cow milk"
+    ],
+    "Cheese": [
+        "Cheese from milk of buffalo, fresh or processed",
+        "Cheese from milk of goats, fresh or processed",
+        "Cheese from milk of sheep, fresh or processed",
+        "Cheese from skimmed cow milk",
+        "Cheese from whole cow milk",
+        "Processed cheese",
+        "Whey cheese"
+    ],
+    "Yoghurt & Fermented": [
+        "Buttermilk, curdled and acidified milk",
+        "Yoghurt",
+        "Yoghurt, with additives"
+    ],
+    "Other Dairy & Ice Cream": [
+        "Cream, fresh",
+        "Ice cream and other edible ice",
+        "Infant food",
+        "Lactose",
+        "Whey, condensed",
+        "Whey, dry"
+    ],
+    "Cattle & Buffalo Meat": [
+        "Beef and veal preparations nes",
+        "Bovine meat, salted, dried or smoked",
+        "Homogenized meat preparations",
+        "Meat of buffalo, fresh or chilled",
+        "Meat of cattle boneless, fresh or chilled",
+        "Meat of cattle with the bone, fresh or chilled",
+        "Sausages and similar products of meat, offal or blood of beef and veal"
+    ],
+    "Pig Meat": [
+        "Meat of pig boneless, fresh or chilled",
+        "Meat of pig with the bone, fresh or chilled",
+        "Pig meat preparations",
+        "Pig meat, cuts, salted, dried or smoked (bacon and ham)",
+        "Sausages and similar products of meat, offal or blood of pig"
+    ],
+    "Poultry Meat": [
+        "Meat of chickens, fresh or chilled",
+        "Meat of ducks, fresh or chilled",
+        "Meat of geese, fresh or chilled",
+        "Meat of turkeys, fresh or chilled",
+        "Poultry meat preparations",
+        "Meat prepared n.e.c.",
+        "Other meat and edible meat offal, salted, in brine, dried or smoked; edible flours and meals of meat or meat offal",
+        "Other meat of mammals, fresh or chilled"
+    ],
+    "Sheep & Goat Meat": [
+        "Meat of goat, fresh or chilled",
+        "Meat of sheep, fresh or chilled"
+    ],
+    "Camel Meat": [
+        "Meat of camels, fresh or chilled"
+    ],
+    "Horse Meat": [
+        "Horse meat, fresh or chilled"
+    ],
+    "Rabbit & Hare Meat": [
+        "Meat of rabbits and hares, fresh or chilled"
+    ],
+    "Game Meat": [
+        "Game meat, fresh, chilled or frozen",
+        "Edible offal of cattle, fresh, chilled or frozen",
+        "Edible offal of goat, fresh, chilled or frozen",
+        "Edible offal of pigs, fresh, chilled or frozen",
+        "Edible offal of sheep, fresh, chilled or frozen",
+        "Edible offals and liver of chickens and guinea fowl, fresh, chilled or frozen",
+        "Fatty liver preparations",
+        "Liver preparations"
+    ],
+    "Animal Fats": [
+        "Animal oils and fats n.e.c.",
+        "Cattle fat, unrendered",
+        "Cattle, butcher fat",
+        "Fat of pigs",
+        "Fat of poultry",
+        "Fat preparations n.e.c.",
+        "Goat fat, unrendered",
+        "Pig fat, rendered",
+        "Pig, butcher fat",
+        "Poultry fat, rendered",
+        "Sheep fat, unrendered",
+        "Tallow"
+    ],
+    "Olive Oils": [
+        "Oil of olive residues",
+        "Olive oil"
+    ],
+    "Tropical & Palm Oils": [
+        "Coconut oil",
+        "Oil of palm kernel",
+        "Palm oil"
+    ],
+    "Grain & Legume Oils": [
+        "Groundnut oil",
+        "Oil of maize",
+        "Oil of rice bran",
+        "Soya bean oil"
+    ],
+    "Seed Oils": [
+        "Cottonseed oil",
+        "Mustard seed oil, crude",
+        "Oil of linseed",
+        "Oil of sesame seed",
+        "Rapeseed or canola oil, crude",
+        "Safflower-seed oil, crude",
+        "Sunflower-seed oil, crude"
+    ],
+    "Miscellaneous Oils": [
+        "Other oil of vegetable origin, crude n.e.c."
+    ],
+    "Processed Fats": [
+        "hydrogenated oils and fats",
+        "Liquid margarine",
+        "Margarine and shortening"
+    ],
+    "Apples": [
+        "Apple juice",
+        "Apple juice, concentrated",
+        "Apples"
+    ],
+    "Apricots": [
+        "Apricots",
+        "Apricots, dried"
+    ],
+    "Avocados": [
+        "Avocados"
+    ],
+    "Bananas": [
+        "Bananas",
+        "Plantains and cooking bananas"
+    ],
+    "Berries": [
+        "Blueberries",
+        "Other berries and fruits of the genus vaccinium n.e.c.",
+        "Raspberries",
+        "Strawberries"
+    ],
+    "Cherries": [
+        "Cherries",
+        "Sour cherries"
+    ],
+    "Citrus": [
+        "Citrus juice, concentrated n.e.c.",
+        "Grapefruit juice, concentrated",
+        "Lemon juice, concentrated",
+        "Lemons and limes",
+        "Orange juice",
+        "Orange juice, concentrated",
+        "Oranges",
+        "Other citrus fruit, n.e.c.",
+        "Pomelos and grapefruits",
+        "Tangerines, mandarins, clementines",
+        "Fruit prepared n.e.c.",
+        "Fruit, nuts, peel, sugar preserved",
+        "Homogenized cooked fruit, prepared",
+        "Juice of fruits n.e.c.",
+        "Other fruit n.e.c., dried",
+        "Other fruits, n.e.c.",
+        "Other tropical fruit, dried",
+        "Other tropical fruits, n.e.c."
+    ],
+    "Dates": [
+        "Dates"
+    ],
+    "Figs": [
+        "Figs",
+        "Figs, dried"
+    ],
+    "Grapes": [
+        "Grape juice",
+        "Grapes",
+        "Must of grape",
+        "Raisins"
+    ],
+    "Kiwi": [
+        "Kiwi fruit"
+    ],
+    "Mangoes & Guavas": [
+        "Mangoes, guavas and mangosteens"
+    ],
+    "Melons": [
+        "Cantaloupes and other melons",
+        "Watermelons"
+    ],
+    "Papayas": [
+        "Papayas"
+    ],
+    "Peaches & Nectarines": [
+        "Peaches and nectarines"
+    ],
+    "Pears": [
+        "Pears"
+    ],
+    "Persimmons": [
+        "Persimmons"
+    ],
+    "Pineapples": [
+        "Juice of pineapples, concentrated",
+        "Pineapple juice",
+        "Pineapples",
+        "Pineapples, otherwise prepared or preserved"
+    ],
+    "Plums": [
+        "Plums and sloes",
+        "Plums, dried"
+    ],
+    "Brassicas": [
+        "Cabbages",
+        "Cauliflowers and broccoli"
+    ],
+    "Carrots & Turnips": [
+        "Carrots and turnips"
+    ],
+    "Cucumbers": [
+        "Cucumbers and gherkins"
+    ],
+    "Eggplants": [
+        "Eggplants (aubergines)"
+    ],
+    "Lettuce & Chicory": [
+        "Lettuce and chicory"
+    ],
+    "Mushrooms": [
+        "Canned mushrooms",
+        "Dried mushrooms",
+        "Mushrooms and truffles"
+    ],
+    "Okra": [
+        "Okra"
+    ],
+    "Olives": [
+        "Olives preserved"
+    ],
+    "Onions & Garlic": [
+        "Green garlic",
+        "Leeks and other alliaceous vegetables",
+        "Onions and shallots, dry (excluding dehydrated)",
+        "Onions and shallots, green"
+    ],
+    "Pumpkins & Squash": [
+        "Pumpkins, squash and gourds"
+    ],
+    "Spinach": [
+        "Spinach"
+    ],
+    "Tomatoes": [
+        "Paste of tomatoes",
+        "Tomatoes",
+        "Tomatoes, peeled (o/t vinegar)"
+    ],
+    "Generic Preserved Vegetables": [
+        "Vegetables frozen",
+        "Vegetables preserved (frozen)",
+        "Vegetables preserved nes (o/t vinegar)",
+        "Vegetables, dehydrated",
+        "Vegetables, pulses and potatoes, preserved by vinegar or acetic acid",
+        "Other vegetables, fresh n.e.c."
+    ],
+    "Cassava": [
+        "Cassava, dry",
+        "Cassava, fresh",
+        "Flour of cassava",
+        "Tapioca of cassava"
+    ],
+    "Potatoes": [
+        "Flour, meal, powder, flakes, granules and pellets of potatoes",
+        "Potatoes",
+        "Potatoes, frozen",
+        "Starch of potatoes",
+        "Tapioca of potatoes"
+    ],
+    "Sweet Potatoes": [
+        "Sweet potatoes"
+    ],
+    "Taro": [
+        "Taro"
+    ],
+    "Yams": [
+        "Yams"
+    ],
+    "Yautia": [
+        "Yautia"
+    ],
+    "Other Roots": [
+        "Edible roots and tubers with high starch or inulin content, n.e.c., fresh",
+        "Flour of roots and tubers n.e.c."
+    ],
+    "Barley": [
+        "Barley",
+        "Barley flour and grits",
+        "Barley, pearled",
+        "Pot barley"
+    ],
+    "Buckwheat": [
+        "Buckwheat",
+        "Flour of buckwheat"
+    ],
+    "Fonio": [
+        "Flour of fonio"
+    ],
+    "Maize": [
+        "Flour of maize",
+        "Germ of maize",
+        "Green corn (maize)",
+        "Maize (corn)",
+        "Starch of maize",
+        "Sweet corn, frozen",
+        "Sweet corn, prepared or preserved"
+    ],
+    "Millet": [
+        "Flour of millet"
+    ],
+    "Oats": [
+        "Oats",
+        "Oats, rolled"
+    ],
+    "Quinoa": [
+        "Quinoa"
+    ],
+    "Rice": [
+        "Bran of rice",
+        "Flour of rice",
+        "Husked rice",
+        "Rice, broken",
+        "Rice, milled",
+        "Rice, milled (husked)"
+    ],
+    "Rye": [
+        "Flour of rye"
+    ],
+    "Sorghum": [
+        "Flour of sorghum",
+        "Sorghum"
+    ],
+    "Wheat": [
+        "Bran of wheat",
+        "Bulgur",
+        "Communion wafers, empty cachets of a kind suitable for pharmaceutical use, sealing wafers, rice paper and similar products.",
+        "Germ of wheat",
+        "Starch of wheat",
+        "Uncooked pasta, not stuffed or otherwise prepared",
+        "Wheat",
+        "Wheat and meslin flour",
+        "Wheat gluten",
+        "Flour of cereals n.e.c.",
+        "Flour of mixed grain"
+    ],
+    "Malt Products": [
+        "Malt extract",
+        "Malt, whether or not roasted"
+    ],
+    "Finished Baked Goods": [
+        "Bread",
+        "Pastry"
+    ],
+    "Uncooked Baking Inputs": [
+        "Mixes and doughs for the preparation of bakers' wares"
+    ],
+    "Breakfast & Processed Cereal Foods": [
+        "Breakfast cereals",
+        "Cereal preparations",
+        "Cereals n.e.c.",
+        "Food preparations of flour, meal or malt extract"
+    ],
+    "Bambara Beans": [
+        "Bambara beans, dry"
+    ],
+    "Generic Beans": [
+        "Beans, dry",
+        "Other beans, green",
+        "Broad beans and horse beans, dry",
+        "Broad beans and horse beans, green"
+    ],
+    "Lentils": [
+        "Lentils, dry"
+    ],
+    "Peas": [
+        "Peas, dry",
+        "Peas, green",
+        "Cow peas, dry",
+        "Chick peas, dry",
+        "Pigeon peas, dry"
+    ],
+    "Soy": [
+        "Soya beans",
+        "Soya curd",
+        "Soya sauce"
+    ],
+    "Vetches": [
+        "Vetches"
+    ],
+    "Generic Pulses & Flours": [
+        "Flour of pulses",
+        "Other pulses n.e.c."
+    ],
+    "Almonds": [
+        "Almonds, in shell",
+        "Almonds, shelled"
+    ],
+    "Cashews": [
+        "Cashew nuts, in shell",
+        "Cashew nuts, shelled"
+    ],
+    "Chestnuts": [
+        "Chestnuts, in shell"
+    ],
+    "Coconuts": [
+        "Coconuts, desiccated",
+        "Coconuts, in shell",
+        "Copra"
+    ],
+    "Groundnuts (Peanuts)": [
+        "Groundnuts, excluding shelled",
+        "Groundnuts, shelled",
+        "Peanut butter",
+        "Prepared groundnuts"
+    ],
+    "Hazelnuts": [
+        "Hazelnuts, shelled"
+    ],
+    "Karite (Shea)": [
+        "Butter of karite nuts",
+        "Karite nuts (sheanuts)"
+    ],
+    "Linseed": [
+        "Linseed",
+        "Oil of linseed"
+    ],
+    "Mustard": [
+        "Flour of mustard seed",
+        "Mustard seed"
+    ],
+    "Pistachios": [
+        "Pistachios, in shell"
+    ],
+    "Sesame": [
+        "Sesame seed"
+    ],
+    "Sunflower": [
+        "Sunflower seed"
+    ],
+    "Walnuts": [
+        "Walnuts, in shell",
+        "Walnuts, shelled"
+    ],
+    "Other Nuts": [
+        "Melonseed",
+        "Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",
+        "Prepared nuts"
+    ],
+    "Cocoa": [
+        "Chocolate products nes",
+        "Cocoa beans",
+        "Cocoa butter, fat and oil",
+        "Cocoa paste not defatted",
+        "Cocoa powder and cake"
+    ],
+    "Coffee": [
+        "Coffee extracts",
+        "Coffee substitutes",
+        "Coffee, decaffeinated or roasted",
+        "Coffee, green"
+    ],
+    "Eggs": [
+        "Eggs from other birds in shell, fresh, n.e.c.",
+        "Eggs, dried",
+        "Eggs, liquid",
+        "Hen eggs in shell, fresh"
+    ],
+    "Spices": [
+        "Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",
+        "Cinnamon and cinnamon-tree flowers, raw",
+        "Cloves (whole stems), raw",
+        "Ginger, raw",
+        "Nutmeg, mace, cardamoms, raw",
+        "Other stimulant, spice and aromatic crops, n.e.c."
+    ],
+    "Chillies & Peppers": [
+        "Pepper (Piper spp.), raw",
+        "Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",
+        "Chillies and peppers, green (Capsicum spp. and Pimenta spp.)"
+    ],
+    "Sugar & Sweeteners": [
+        "Cane sugar, non-centrifugal",
+        "Glucose and dextrose",
+        "Other fructose and syrup",
+        "Raw cane or beet sugar (centrifugal only)",
+        "Refined sugar",
+        "Sugar and syrups n.e.c.",
+        "Sugar cane",
+        "Sugar confectionery"
+    ],
+    "Honey": [
+        "Natural honey"
+    ],
+    "Flour of Non-Cereals": [
+        "Flour of fruits",
+        "Flour of mustard seed (Listed in Mustard above as well)"
+    ],
+    "General Food Preparations": [
+        "Food preparations n.e.c.",
+        "Other non-alcoholic caloric beverages"
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "category": "Linseed",
+    "product_name": "Linseed (Placeholder Name)",
+    "serving_size": "100g",
+    "data_sources": [
+        "Manual Creation"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 534,
+            "unit": "kcal",
+            "source": "Manual Skeleton"
+        },
+        "Protein": {
+            "value": 19,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Fat": {
+            "value": 43,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Saturated Fat": {
+            "value": 3.7,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Carbohydrates": {
+            "value": 30,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Sugar": {
+            "value": 0,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Fiber": {
+            "value": 27,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Sodium": {
+            "value": 30,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Calcium": {
+            "value": 255,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Iron": {
+            "value": 5.7,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Vitamin A": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Manual Skeleton"
+        },
+        "Vitamin C": {
+            "value": 0.6,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Manual Skeleton"
+        }
+    },
+    "missing_nutrients": [
+        "Calories",
+        "Protein",
+        "Fat",
+        "Saturated Fat",
+        "Carbohydrates",
+        "Sugar",
+        "Fiber",
+        "Sodium",
+        "Calcium",
+        "Iron",
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

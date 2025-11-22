@@ -1,0 +1,79 @@
+{
+    "category": "Walnuts",
+    "product_name": "Nuts, walnuts, English, halves, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2346394",
+        "SR Legacy: 170187"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 729.556,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 14.5644,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 69.74,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 6.054,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Carbohydrates": {
+            "value": 10.9096,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 2.61,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 5.21,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 2.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 88.26,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 2.235,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 1.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 1.3,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

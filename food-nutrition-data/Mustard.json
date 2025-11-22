@@ -1,0 +1,79 @@
+{
+    "category": "Mustard",
+    "product_name": "Mustard, prepared, yellow",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 326698",
+        "SR Legacy: 170929"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 61.0,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 4.25,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 3.38,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.252,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Carbohydrates": {
+            "value": 5.3,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 1.43,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 4.3,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 1100.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 63.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 1.59,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 4.0,
+            "unit": "mcg",
+            "source": "Foundation"
+        },
+        "Vitamin C": {
+            "value": 0.4,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "category": "Onions & Garlic",
+    "product_name": "Garlic, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 1104647",
+        "SR Legacy: 170000"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 143.0,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 6.62,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.38,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.042,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 28.2,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 4.24,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 2.7,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 4.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 23.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Iron": {
+            "value": 0.21,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin A": {
+            "value": 2.0,
+            "unit": "IU",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 10.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

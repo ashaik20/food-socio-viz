@@ -1,0 +1,80 @@
+{
+    "category": "Plums",
+    "product_name": "Plum, black, with skin, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2710837",
+        "SR Legacy: 169949"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 58.6773,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 0.578125,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.2825,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.017,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 13.455575,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 7.96,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 1.346,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Calcium": {
+            "value": 4.031,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.17,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin A": {
+            "value": 17.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 1.824,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Sodium",
+        "Vitamin D"
+    ]
+}

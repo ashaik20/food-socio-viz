@@ -1,0 +1,79 @@
+{
+    "category": "Uncooked Baking Inputs",
+    "product_name": "Figs, dried, uncooked",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 746768",
+        "SR Legacy: 169745"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 249.0,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 3.3,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.92,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.406,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 63.9,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 47.9,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 9.8,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 10.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 162.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 2.03,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 6.0,
+            "unit": "mcg",
+            "source": "Foundation"
+        },
+        "Vitamin C": {
+            "value": 1.2,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

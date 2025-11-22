@@ -1,0 +1,79 @@
+{
+    "category": "Chillies & Peppers",
+    "product_name": "Peppers, bell, green, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2258588",
+        "SR Legacy: 168576"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 22.9291,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 0.715,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.1063,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.092,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 4.7781,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 4.12,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 0.9419,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 3.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 7.496,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.1861,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 54.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 99.51,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

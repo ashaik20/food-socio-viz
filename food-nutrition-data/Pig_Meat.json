@@ -1,0 +1,82 @@
+{
+    "category": "Pig Meat",
+    "product_name": "Ham, sliced, pre-packaged, deli meat (96%fat free, water added)",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 332397"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 263,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 16.7,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 21,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 7.8,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Carbohydrates": {
+            "value": 0.27,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fiber": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Sodium": {
+            "value": 100,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 14,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.88,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin C": {
+            "value": 0.7,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Sugar",
+        "Fiber",
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

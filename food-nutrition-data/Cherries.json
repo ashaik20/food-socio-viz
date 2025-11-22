@@ -1,0 +1,80 @@
+{
+    "category": "Cherries",
+    "product_name": "Cherries, sweet, dark red, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2346399",
+        "SR Legacy: 171719"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 70.5425,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 1.039375,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.1925,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.038,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 16.163125,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 13.87,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 2.1,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Sodium": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Calcium": {
+            "value": 12.26,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.1054,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 3.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 10.39,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Sodium",
+        "Vitamin D"
+    ]
+}

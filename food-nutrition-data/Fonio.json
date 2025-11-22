@@ -1,0 +1,82 @@
+{
+    "category": "Fonio",
+    "product_name": "Fonio, grain, dry, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2710829"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 369.133,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 7.16875,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 1.693,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Carbohydrates": {
+            "value": 81.30525,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fiber": {
+            "value": 2.197,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 2.967,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 11.65,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 2.663,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Saturated Fat",
+        "Sugar",
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

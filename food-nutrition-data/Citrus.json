@@ -1,0 +1,79 @@
+{
+    "category": "Citrus",
+    "product_name": "Oranges, raw, navels",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 746771",
+        "SR Legacy: 173033"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 47.0,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 0.91,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.15,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.014,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 11.8,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 8.57,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 2.0,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 9.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 43.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.33,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 46.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 59.1,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

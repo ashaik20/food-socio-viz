@@ -1,0 +1,89 @@
+{
+    "category": "Grain & Legume Oils",
+    "product_name": "Oil, corn",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 748323"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 884,
+            "unit": "kcal",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Protein": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fat": {
+            "value": 100,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Saturated Fat": {
+            "value": 16.7,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Carbohydrates": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Sugar": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fiber": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Sodium": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Calcium": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Iron": {
+            "value": 0.03,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin A": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Calories",
+        "Protein",
+        "Fat",
+        "Carbohydrates",
+        "Sugar",
+        "Fiber",
+        "Sodium",
+        "Calcium",
+        "Iron",
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

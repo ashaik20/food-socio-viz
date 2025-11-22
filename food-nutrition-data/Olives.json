@@ -1,0 +1,80 @@
+{
+    "category": "Olives",
+    "product_name": "Olives, green, Manzanilla, stuffed with pimiento",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 332791",
+        "SR Legacy: 169096"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 130.0,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 1.15,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 12.9,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 2.3,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Carbohydrates": {
+            "value": 4.96,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 0.0,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 4.0,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 1620.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 121.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.31,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 25.0,
+            "unit": "mcg",
+            "source": "Foundation"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

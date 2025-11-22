@@ -1,0 +1,79 @@
+{
+    "category": "Pears",
+    "product_name": "Pears, raw, bartlett",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 746773",
+        "SR Legacy: 169118"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 57.0,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 0.38,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.16,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.022,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 15.1,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 9.69,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 3.1,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 7.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 8.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.17,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 1.0,
+            "unit": "mcg",
+            "source": "Foundation"
+        },
+        "Vitamin C": {
+            "value": 4.4,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

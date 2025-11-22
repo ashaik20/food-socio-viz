@@ -1,0 +1,78 @@
+{
+    "category": "Spirits",
+    "product_name": "Spirits (Placeholder Name)",
+    "serving_size": "100g",
+    "data_sources": [
+        "SR Legacy"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 231,
+            "unit": "kcal",
+            "source": "Manual Skeleton"
+        },
+        "Protein": {
+            "value": 0,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Fat": {
+            "value": 0,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Saturated Fat": {
+            "value": 0,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Carbohydrates": {
+            "value": 0,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Sugar": {
+            "value": 0,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Fiber": {
+            "value": 0,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Sodium": {
+            "value": 1,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Calcium": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Iron": {
+            "value": 0.04,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Vitamin A": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Manual Skeleton"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Manual Skeleton"
+        }
+    },
+    "missing_nutrients": [
+        
+    ]
+}

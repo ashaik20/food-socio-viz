@@ -1,0 +1,80 @@
+{
+    "category": "Other Nuts",
+    "product_name": "Nuts, macadamia nuts, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2515378",
+        "SR Legacy: 170584"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 711.89,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 7.7857,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 64.93,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.319,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 24.0943,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fiber": {
+            "value": 7.563,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 7.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 52.71,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 1.881,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 28.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 15.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Sugar",
+        "Vitamin D"
+    ]
+}

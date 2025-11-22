@@ -1,0 +1,79 @@
+{
+    "category": "Mushrooms",
+    "product_name": "Mushroom, crimini",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2003601",
+        "SR Legacy: 169255"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 30.2035,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 3.09375,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.1967,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.01,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 4.01455,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 2.5,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 1.781,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 4.572,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 4.105,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.3115,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0.0,
+            "unit": "mcg",
+            "source": "Foundation"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin C"
+    ]
+}

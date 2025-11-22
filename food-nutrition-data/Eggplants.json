@@ -1,0 +1,79 @@
+{
+    "category": "Eggplants",
+    "product_name": "Eggplant, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2685577",
+        "SR Legacy: 169228"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 26.0848,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 0.851875,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.12,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.034,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 5.399325,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 2.35,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 2.448,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 0.4425,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 11.06,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.23,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin A": {
+            "value": 1.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 0.8,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

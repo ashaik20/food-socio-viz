@@ -1,0 +1,83 @@
+{
+    "category": "Rice",
+    "product_name": "Rice, brown, long grain, unenriched, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2512380"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 365.518,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 7.25305,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 3.306,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.1,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Carbohydrates": {
+            "value": 76.68795,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 0.1,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fiber": {
+            "value": 3.021,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 1,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Calcium": {
+            "value": 8.058,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 1.242,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Saturated Fat",
+        "Sugar",
+        "Sodium",
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

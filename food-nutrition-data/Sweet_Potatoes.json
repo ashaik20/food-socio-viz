@@ -1,0 +1,81 @@
+{
+    "category": "Sweet Potatoes",
+    "product_name": "Sweet potatoes, orange flesh, without skin, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2346404"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 78.999,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 1.578125,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.375,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Carbohydrates": {
+            "value": 17.327875,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 6.06,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 4.441,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Calcium": {
+            "value": 22.33,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.398,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin C": {
+            "value": 14.84,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Saturated Fat",
+        "Sodium",
+        "Vitamin A",
+        "Vitamin D"
+    ]
+}

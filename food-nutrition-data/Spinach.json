@@ -1,0 +1,79 @@
+{
+    "category": "Spinach",
+    "product_name": "Spinach, mature",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 1999633",
+        "SR Legacy: 168462"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 27.63,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 2.90625,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.6044,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.063,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 2.64135,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 0.42,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 1.588,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 106.6,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 66.64,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 1.054,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 306,
+            "unit": "mcg",
+            "source": "Foundation"
+        },
+        "Vitamin C": {
+            "value": 30.27,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

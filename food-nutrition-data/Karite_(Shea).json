@@ -1,0 +1,77 @@
+{
+    "category": "Karite (Shea)",
+    "product_name": "Karite (Shea)",
+    "serving_size": "100g",
+    "data_sources": [
+        "Manual Creation"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 85,
+            "unit": "kcal",
+            "source": "Manual Skeleton"
+        },
+        "Protein": {
+            "value": 2,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Fat": {
+            "value": 1,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Saturated Fat": {
+            "value": 0,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Carbohydrates": {
+            "value": 30,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Sugar": {
+            "value": 3.5,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Fiber": {
+            "value": 0,
+            "unit": "g",
+            "source": "Manual Skeleton"
+        },
+        "Sodium": {
+            "value": 13,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Calcium": {
+            "value": 40,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Iron": {
+            "value": 3,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Vitamin A": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Manual Skeleton"
+        },
+        "Vitamin C": {
+            "value": 120,
+            "unit": "mg",
+            "source": "Manual Skeleton"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Manual Skeleton"
+        }
+    },
+    "missing_nutrients": [
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "category": "Pineapples",
+    "product_name": "Pineapple, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2346398",
+        "SR Legacy: 169124"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 60.1113,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 0.4609375,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.2113,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.009,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 14.0914625,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 11.42,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 0.9346,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 1.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 12.5,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.054,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 3.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 58.61,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

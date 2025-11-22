@@ -1,0 +1,80 @@
+{
+    "category": "Almonds",
+    "product_name": "Nuts, almonds, whole, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2346393",
+        "SR Legacy: 170567"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 625.75,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 21.45038,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 51.09,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 3.785,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Carbohydrates": {
+            "value": 20.03462,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 4.35,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Fiber": {
+            "value": 10.78,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 1.0,
+            "unit": "mg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Calcium": {
+            "value": 253.6,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 3.741,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 2.0,
+            "unit": "IU",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 0,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

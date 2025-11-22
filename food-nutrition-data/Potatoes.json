@@ -1,0 +1,79 @@
+{
+    "category": "Potatoes",
+    "product_name": "Potatoes, russet, without skin, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2346401",
+        "SR Legacy: 170032"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 83.42,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 2.27375,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.36,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.026,
+            "unit": "g",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Carbohydrates": {
+            "value": 17.77125,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 0.53,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 14.93,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 2.743,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 7.801,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.3835,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0.0,
+            "unit": "mcg",
+            "source": "SR Legacy (Backfill)"
+        },
+        "Vitamin C": {
+            "value": 10.9,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Vitamin D"
+    ]
+}

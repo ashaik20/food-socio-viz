@@ -1,0 +1,85 @@
+{
+    "category": "Bambara Beans",
+    "product_name": "Beans, Dry, Brown (0% moisture)",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 747433"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 370,
+            "unit": "kcal",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Protein": {
+            "value": 25.6,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 1.12,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0.1,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Carbohydrates": {
+            "value": 20,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Sugar": {
+            "value": 2.4,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Fiber": {
+            "value": 4.1,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 4,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Calcium": {
+            "value": 158.0,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 4.7,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin C": {
+            "value": 19,
+            "unit": "mg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Calories",
+        "Saturated Fat",
+        "Carbohydrates",
+        "Sugar",
+        "Sodium",
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D"
+    ]
+}

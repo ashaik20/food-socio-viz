@@ -1,0 +1,80 @@
+{
+    "category": "Kiwi",
+    "product_name": "Kiwifruit (kiwi), green, peeled, raw",
+    "serving_size": "100g",
+    "data_sources": [
+        "Foundation: 2710831"
+    ],
+    "nutrients": {
+        "Calories": {
+            "value": 65.0648,
+            "unit": "kcal",
+            "source": "Foundation"
+        },
+        "Protein": {
+            "value": 1.008125,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fat": {
+            "value": 0.64,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Saturated Fat": {
+            "value": 0,
+            "unit": "g",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Carbohydrates": {
+            "value": 13.818075,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sugar": {
+            "value": 8.56,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Fiber": {
+            "value": 2.129,
+            "unit": "g",
+            "source": "Foundation"
+        },
+        "Sodium": {
+            "value": 2.275,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Calcium": {
+            "value": 24.38,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Iron": {
+            "value": 0.03663,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin A": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        },
+        "Vitamin C": {
+            "value": 58.78,
+            "unit": "mg",
+            "source": "Foundation"
+        },
+        "Vitamin D": {
+            "value": 0,
+            "unit": "mcg",
+            "source": "Not found (Defaulted to 0)"
+        }
+    },
+    "missing_nutrients": [
+        "Saturated Fat",
+        "Vitamin A",
+        "Vitamin D"
+    ]
+}
