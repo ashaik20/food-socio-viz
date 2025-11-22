@@ -20,17 +20,40 @@
     
 
     <script>
-    
         // enter code to define margin and dimensions for svg
         const margin = {top: 50, right: 20, bottom: 50, left: 20};
         const width = 1200 - margin.left - margin.right;
         const height = 600 - margin.top - margin.bottom;
         
-        // enter code to create svg
-        const svg1 = d3.select('body').append('svg')
+        const container = d3.select('body')
+            .append('div')
+            .attr('id', 'viz-container')
+            .style('display', 'flex')
+            .style('gap', '20px')
+            .style('flex-wrap', 'wrap');
+
+        const mapWrapper = container.append('div')
+            .attr('id', 'map-wrapper')
+            .style('display', 'flex')
+            .style('flex-direction', 'column');
+
+        const defaultInfoMessage = 'Hover over a country or scatter point to see details.';
+        const infoPanel = mapWrapper.append('div')
+            .attr('id', 'map-info')
+            .style('padding', '8px 12px')
+            .style('background', '#f5f5f5')
+            .style('border', '1px solid #ccc')
+            .style('border-radius', '4px')
+            .style('min-height', '60px')
+            .style('margin-bottom', '8px')
+            .style('font-family', 'sans-serif')
+            .style('font-size', '14px')
+            .html(defaultInfoMessage);
+
+        const svg1 = mapWrapper.append('svg')
             .attr('width', width + margin.left + margin.right)
             .attr('height', height + margin.top + margin.bottom)
-            .attr('id', 'choropleth')
+            .attr('id', 'choropleth');
             
 
         const svg = svg1.append('g')
@@ -42,56 +65,120 @@
             .translate([width / 2 - 100, height / 1.5 - 100]);
         var path = d3.geoPath().projection(projection);
 
-        Promise.all([ 
-            // enter code to read files
-            d3.json('./data/world_countries.json'),
-            d3.csv('./data/country_nutrition_scores.csv')
+        const scatterMargin = {top: 50, right: 30, bottom: 70, left: 80};
+        const scatterWidth = 600 - scatterMargin.left - scatterMargin.right;
+        const scatterHeight = 600 - scatterMargin.top - scatterMargin.bottom;
 
-        ]).then(
-            // enter code to call ready() with required arguments
-            ([world, nutritionScores]) => {
-                ready(world, nutritionScores);
+        const scatterSvg = container.append('svg')
+            .attr('width', scatterWidth + scatterMargin.left + scatterMargin.right)
+            .attr('height', scatterHeight + scatterMargin.top + scatterMargin.bottom)
+            .attr('id', 'scatterplot');
+
+        const scatterGroup = scatterSvg.append('g')
+            .attr('transform', `translate(${scatterMargin.left},${scatterMargin.top})`);
+
+        const gdpFormat = d3.format(',.0f');
+        let mapPaths = null;
+        let scatterDots = null;
+        let countryInfo = {};
+
+        function updateInfoPanel(iso, fallbackName) {
+            const info = iso ? countryInfo[iso] : null;
+            if (!info) {
+                infoPanel.html(defaultInfoMessage);
+                return;
             }
-        );
+            const name = info.name || fallbackName || 'Unknown';
+            const scoreText = info.score !== undefined ? info.score.toFixed(2) : 'N/A';
+            const gdpText = info.gdp ? gdpFormat(info.gdp) : 'N/A';
+            infoPanel.html(`<strong>${name}</strong><br/>Nutrition Score: ${scoreText}<br/>GDP per capita: ${gdpText}`);
+        }
+
+        function highlightCountry(iso, fallbackName) {
+            if (mapPaths) {
+                mapPaths
+                    .attr('stroke-width', d => d.id === iso ? 3 : 0.6)
+                    .attr('stroke', d => d.id === iso ? '#ff6f00' : '#333')
+                    .attr('opacity', d => !iso || d.id === iso ? 1 : 0.5);
+                if (iso) {
+                    mapPaths.filter(d => d.id === iso).raise();
+                }
+            }
+            if (scatterDots) {
+                scatterDots
+                    .attr('r', d => d.iso === iso ? 6 : 4)
+                    .attr('fill', d => d.iso === iso ? '#d7301f' : '#2c7fb8')
+                    .attr('opacity', d => !iso || d.iso === iso ? 0.9 : 0.35);
+            }
+            updateInfoPanel(iso, fallbackName);
+        }
+
+        function loadGdpData(path) {
+            return d3.text(path).then(raw => {
+                const lines = raw.split(/\r?\n/);
+                const headerIndex = lines.findIndex(line => line.startsWith('"Country Name"'));
+                if (headerIndex === -1) {
+                    console.warn('GDP header row not found.');
+                    return [];
+                }
+                const cleaned = lines.slice(headerIndex).join('\n');
+                return d3.csvParse(cleaned);
+            });
+        }
+
+        Promise.all([
+            d3.json('./data/world_countries.json'),
+            d3.csv('./data/country_nutrition_scores.csv'),
+            loadGdpData('./data/API_NY.GDP.PCAP.PP.CD_DS2_en_csv_v2_254072.csv')
+        ]).then(([world, nutritionScores, gdpRows]) => {
+            ready(world, nutritionScores, gdpRows);
+        });
         
         // this function should be called once the data from files have been read
         // world: topojson from world_countries.json
-        function ready(world, nutritionScores) {
-            // create Choropleth with default option. Call createMapAndLegend() with required arguments.
-
+        function ready(world, nutritionScores, gdpRows) {
             const nutrMap = {};
             nutritionScores.forEach(d => {
                 nutrMap[d.ISO3] = +d['Nutrition Score'];
             });
 
-            createMapAndLegend(world, nutrMap);
+            const gdpMap = buildGdpMap(gdpRows);
+            countryInfo = nutritionScores.reduce((acc, d) => {
+                acc[d.ISO3] = {
+                    name: d.Area,
+                    score: +d['Nutrition Score'],
+                    gdp: gdpMap[d.ISO3]
+                };
+                return acc;
+            }, {});
+            createMapAndLegend(world, nutrMap, gdpMap);
+            createScatterPlot(nutritionScores, gdpMap);
+        }
+
+        function buildGdpMap(rows) {
+            const gdpMap = {};
+            rows.forEach(row => {
+                const years = Object.keys(row).filter(k => /^\d{4}$/.test(k)).sort((a, b) => b - a);
+                for (const year of years) {
+                    const value = parseFloat(row[year]);
+                    if (!isNaN(value) && value > 0) {
+                        gdpMap[row['Country Code']] = value;
+                        break;
+                    }
+                }
+            });
+            return gdpMap;
         }
 
         // this function should create a Choropleth map
-        function createMapAndLegend(world, nutrMap){ 
+        function createMapAndLegend(world, nutrMap, gdpMap){ 
             svg.selectAll("path").remove();
 
             const color = d3.scaleSequential()
                 .domain(d3.extent(Object.values(nutrMap)))
                 .interpolator(d3.interpolateYlGnBu);
 
-            // Create a single tooltip div (don't append multiple times on re-render)
-            let tooltip = d3.select("body").select(".tooltip");
-            if (tooltip.empty()) {
-                tooltip = d3.select("body").append("div")
-                    .attr("class", "tooltip")
-                    .style("position", "absolute")
-                    .style("padding", "6px 10px")
-                    .style("background", "white")
-                    .style("border", "1px solid #ccc")
-                    .style("border-radius", "4px")
-                    .style("pointer-events", "none")
-                    .style("opacity", 0)
-                    .style("z-index", 9999)
-                    .style("max-width", "300px");
-            }
-
-            svg.selectAll("path")
+            mapPaths = svg.selectAll("path")
                 .data(world.features)
                 .enter()
                 .append("path")
@@ -103,16 +190,11 @@
                 .attr("stroke", "#333")
                 .attr("stroke-width", 0.5)
                 .on("mouseover", function(d) {
-                    const score = nutrMap[d.id];
-                    const px = d3.event && d3.event.pageX ? d3.event.pageX : 0;
-                    const py = d3.event && d3.event.pageY ? d3.event.pageY : 0;
-                    tooltip.transition().duration(200).style("opacity", 0.9);
-                    tooltip.html(`<strong>${d.properties.name}</strong><br/>Nutrition Score: ${score !== undefined ? score : 'N/A'}`)
-                        .style("left", (px + 10) + "px")
-                        .style("top", (py - 28) + "px");
+                    const iso = d.id;
+                    highlightCountry(iso, d.properties.name);
                 })
                 .on("mouseout", function() {
-                    tooltip.transition().duration(500).style("opacity", 0);
+                    highlightCountry(null);
                 });
 
             const legend = d3.legendColor()
@@ -126,6 +208,67 @@
                 .attr("class", "legend")
                 .attr("transform", `translate(0, ${height + margin.bottom - 10})`)
                 .call(legend);
+        }
+
+        function createScatterPlot(nutritionScores, gdpMap) {
+            const data = nutritionScores
+                .map(d => {
+                    const gdp = gdpMap[d.ISO3];
+                    const score = +d['Nutrition Score'];
+                    return (gdp !== undefined && score) ? {
+                        iso: d.ISO3,
+                        name: d.Area,
+                        gdp,
+                        score
+                    } : null;
+                })
+                .filter(Boolean);
+
+            const xScale = d3.scaleLog()
+                .domain(d3.extent(data, d => d.gdp))
+                .range([0, scatterWidth])
+                .nice();
+
+            const yScale = d3.scaleLinear()
+                .domain([0, 100])
+                .range([scatterHeight, 0]);
+
+            scatterGroup.append('g')
+                .attr('transform', `translate(0,${scatterHeight})`)
+                .call(d3.axisBottom(xScale).ticks(6, "~s"));
+
+            scatterGroup.append('g')
+                .call(d3.axisLeft(yScale));
+
+            scatterGroup.append('text')
+                .attr('x', scatterWidth / 2)
+                .attr('y', scatterHeight + scatterMargin.bottom - 25)
+                .attr('text-anchor', 'middle')
+                .text('GDP per capita (PPP)');
+
+            scatterGroup.append('text')
+                .attr('transform', 'rotate(-90)')
+                .attr('x', -scatterHeight / 2)
+                .attr('y', -scatterMargin.left + 20)
+                .attr('text-anchor', 'middle')
+                .text('Nutrition Score');
+
+            scatterDots = scatterGroup.selectAll('.dot')
+                .data(data)
+                .enter()
+                .append('circle')
+                .attr('class', 'dot')
+                .attr('cx', d => xScale(d.gdp))
+                .attr('cy', d => yScale(d.score))
+                .attr('r', 4)
+                .attr('fill', '#2c7fb8')
+                .attr('opacity', 0.75)
+                .on('mouseover', function(d) {
+                    highlightCountry(d.iso, d.name);
+                })
+                .on('mouseout', () => {
+                    highlightCountry(null);
+                });
         }
     </script>
 </body>
