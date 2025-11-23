@@ -18,7 +18,7 @@ The goal is to reveal how different regions’ nutrition levels relate to their 
 - `global_food_nutrition.html` - base site contains d3 visualization and representations
 - `data/` folder 
    - `world_countries.json` (country boundaries) (GIVEN)
-   - `API_NY.GDP.PCAP.PP.CD_DS2_en_csv_v2_254072.csv` is a file containing GDP data (GIVEN)
+   - `API_NY.GDP.PCAP.PP.CD_DS2_en_csv_v2_254072.csv` is a file containing GDP data by country (GIVEN)
    - `SUA_Crops_Livestock_E_All_Data_NOFLAG.csv` is a file that contains the bulk food supply intake that needs be downloaded (NEED TO DOWNLOAD)
    - After running through the ipynb files, more files will be generated
       - `area_cluster_colors.csv` represents a mapping of ISO3 country codes to cluster colors (GENERATED)
@@ -26,7 +26,7 @@ The goal is to reveal how different regions’ nutrition levels relate to their 
       - `country_nutrition_scores.csv` represents the nutrition scores of each country along with ISO3 codes for mapping (GENERATED)
       - `SUA_Crops_Livestock_E_All_Data_Categorized.csv` represents a succient categeorized version of the original bulk dataset (GENERATED)
    - `nutrient rankings` folder
-      - Contains three files corresponding to rankings of each countries carbohydrates, fats, and protein intake (GIVEN)
+      - Contains various csv files corresponding to rankings of each countries micronutrients (GENERATED)
 - `lib/` folder contains D3.js dependencies 
 - `dataset_analysis`
    - `category_map.json` represents a consolidation and mapping of categories from the bulk FAOStat dataset
@@ -45,20 +45,21 @@ The goal is to reveal how different regions’ nutrition levels relate to their 
    git clone https://github.com/ashaik20/food-socio-viz.git
    cd food-socio-viz
    ```
+   Feel free to open the github repository using an editor of your choice (VS Code, Intellij, etc.)
 2. Download the original food supply intake dataset from this [FAOStat link](https://bulks-faostat.fao.org/production/SUA_Crops_Livestock_E_All_Data.zip) and place the datasets, specifically, `SUA_Crops_Livestock_E_All_Data_NOFLAG.csv`, within the `data` folder.
 3. Setup a Conda environment from the project root and then activate it:
    ```
    conda env create -f environment.yml
    conda activate food_socio_viz
    ```
-4. Click Run-all for first `FAOSTAT_full.ipynb` and second `Country-Clustering.ipynb` to generate the required dataset files using this conda environment. This will generate the required dataset files for the map visualization.
+4. Click Run-all for first `FAOSTAT_full.ipynb` and second `Country-Clustering.ipynb` to generate the required dataset files using this new food_socio_viz conda environment as the kernel. This will generate the required dataset files for the map visualization.
 
 ## EXECUTION
 1. Start a python server:
    ```bash
    python -m http.server 8000
    ```
-2. Navigate to [http://[::1]:8000/](http://[::1]:8000/) and click `global_food_nutrition.html` from which the map will be visible
+2. Navigate to [http://[::1]:8000/http://[::1]:8000/global_food_nutrition.html](http://[::1]:8000/http://[::1]:8000/global_food_nutrition.html) from which the site will be visible
 
 ## Data Sources
 
