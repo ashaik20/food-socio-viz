@@ -59,7 +59,7 @@ The goal is to reveal how different regions’ nutrition levels relate to their 
    ```bash
    python -m http.server 8000
    ```
-2. Navigate to [http://[::1]:8000/http://[::1]:8000/global_food_nutrition.html](http://[::1]:8000/http://[::1]:8000/global_food_nutrition.html) from which the site will be visible
+2. Navigate to [http://[::1]:8000/global_food_nutrition.html](http://[::1]:8000/http://[::1]:8000/global_food_nutrition.html) from which the site will be visible
 
 ## Data Sources
 
