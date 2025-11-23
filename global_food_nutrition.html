@@ -102,21 +102,20 @@
     <div class="container">
         <!-- Add heading for the visualization -->
         <h2>Food Nutrition Indices: Data Visualization</h2>
-        <div style="display:flex;justify-content:center;gap:8px;margin-bottom:16px;font-size:14px;">
+        <div style="display:flex;justify-content:center;gap:12px;align-items:center;margin-bottom:16px;font-size:14px;">
             <label for="metric-select" style="font-weight:600;color:#0b3d91;">Metric:</label>
             <select id="metric-select" style="min-width:190px;padding:6px 10px;border-radius:6px;border:1px solid #cdd3de;">
                 <option value="nutrition" selected>Nutrition Score</option>
                 <option value="protein">Protein</option>
-                <option value="fat">Fat</option>
-                <option value="carbohydrates">Carbs</option>
+                <option value="fat">Fats</option>
+                <option value="carbohydrates">Carbohydrates</option>
+            </select>
+            <label for="colorMode" style="font-weight:600;color:#0b3d91;margin-left:8px;">Color Mode:</label>
+            <select id="colorMode" style="min-width:160px;padding:6px 10px;border-radius:6px;border:1px solid #cdd3de;">
+                <option value="nutrition">Individual</option>
+                <option value="cluster">Cluster</option>
             </select>
         </div>
-
-        <label for="colorMode">Color Mode:</label>
-        <select id="colorMode">
-            <option value="nutrition">Individual</option>
-            <option value="cluster">Cluster</option>
-        </select>
     
 
     <script>
@@ -180,6 +179,16 @@
 
         const scatterGroup = scatterSvg.append('g')
             .attr('transform', `translate(${scatterMargin.left},${scatterMargin.top})`);
+        // Scatter plot title
+        scatterGroup.append('text')
+            .attr('class', 'scatter-title')
+            .attr('x', scatterWidth / 2)
+            .attr('y', -scatterMargin.top / 2)
+            .attr('text-anchor', 'middle')
+            .style('font-size', '16px')
+            .style('font-weight', 700)
+            .style('fill', '#0b3d91')
+            .text('Plot of countries across various statistic types');
         const xScale = d3.scaleLog().range([0, scatterWidth]);
         const yScale = d3.scaleLinear().range([scatterHeight, 0]);
         const scatterXAxis = scatterGroup.append('g')
@@ -607,21 +616,31 @@
                         .text(formatter(value));
                 });
             } else {
-                const minRank = metricState.maxRank || Math.round(extent[0]);
-                // min rank
-                legendG.append('text')
-                    .attr('x', legendWidth + 12)
-                    .attr('y', legendHeight + 6)
-                    .style('font-size', '13px')
-                    .style('font-weight', 600)
-                    .text(`#${minRank}`);
-                // rank 1
-                legendG.append('text')
-                    .attr('x', legendWidth + 12)
-                    .attr('y', 10)
-                    .style('font-size', '13px')
-                    .style('font-weight', 600)
-                    .text('#1');
+                // For rank-based metrics, show five ticks (or fewer if maxRank < 5)
+                const maxRank = metricState.maxRank || Math.max(1, Math.round(extent[1]));
+                const ticks = Math.min(5, Math.max(2, maxRank));
+                const ranks = [];
+                for (let i = 0; i < ticks; i++) {
+                    const rk = Math.round(1 + i * (maxRank - 1) / (ticks - 1));
+                    if (!ranks.includes(rk)) ranks.push(rk);
+                }
+                const denom = Math.max(1, (maxRank - 1));
+                ranks.forEach(rk => {
+                    const y = ((rk - 1) / denom) * legendHeight + 5;
+                    legendG.append('line')
+                        .attr('x1', legendWidth)
+                        .attr('x2', legendWidth + 6)
+                        .attr('y1', y)
+                        .attr('y2', y)
+                        .style('stroke', '#041127')
+                        .style('stroke-width', 1);
+                    legendG.append('text')
+                        .attr('x', legendWidth + 12)
+                        .attr('y', y + 4)
+                        .style('font-size', '13px')
+                        .style('font-weight', 600)
+                        .text(`#${rk}`);
+                });
             }
 
             legendG.append('text')
@@ -635,21 +654,45 @@
 
         function updateScatterPlot(metricState) {
             if (!scatterDots || !metricState) return;
-            const maxRank = metricState.maxRank || 1;
-            yScale.domain([maxRank, 1]);
-            scatterDots.transition().duration(600)
-                .attr('cx', d => xScale(d.gdp))
-                .attr('cy', d => {
-                    const rank = metricState.ranks[d.iso];
-                    return rank ? yScale(rank) : scatterHeight;
-                })
-                .attr('fill', d => {
-                    if (currentColorMode === 'cluster') return clusterMap[d.iso] ? clusterMap[d.iso].color : '#ccc';
-                    return '#2c7fb8';
-                })
-                .attr('opacity', currentColorMode === 'cluster' ? 0.85 : 0.75);
+            if (metricState.id === 'nutrition') {
+                const vals = Object.values(metricState.values).filter(v => v != null && !isNaN(v));
+                const extentVals = vals.length ? d3.extent(vals) : [0, 1];
+                const pad = (extentVals[1] - extentVals[0]) * 0.05;
+                yScale.domain([extentVals[1] + pad, Math.max(0, extentVals[0] - pad)]);
 
-            scatterYAxis.call(d3.axisLeft(yScale).ticks(6));
+                scatterDots.transition().duration(600)
+                    .attr('cx', d => xScale(d.gdp))
+                    .attr('cy', d => {
+                        const val = metricState.values[d.iso];
+                        return val != null && !isNaN(val) ? yScale(val) : scatterHeight;
+                    })
+                    .attr('fill', d => {
+                        if (currentColorMode === 'cluster') return clusterMap[d.iso] ? clusterMap[d.iso].color : '#ccc';
+                        return '#2c7fb8';
+                    })
+                    .attr('opacity', currentColorMode === 'cluster' ? 0.85 : 0.75);
+
+                scatterYAxis.call(d3.axisLeft(yScale).ticks(6).tickFormat(metricState.formatter || metricFormatters.default));
+                scatterYLabel.text(metricState.label);
+            } else {
+                const maxRank = metricState.maxRank || 1;
+                yScale.domain([maxRank, 1]);
+
+                scatterDots.transition().duration(600)
+                    .attr('cx', d => xScale(d.gdp))
+                    .attr('cy', d => {
+                        const rank = metricState.ranks[d.iso];
+                        return rank ? yScale(rank) : scatterHeight;
+                    })
+                    .attr('fill', d => {
+                        if (currentColorMode === 'cluster') return clusterMap[d.iso] ? clusterMap[d.iso].color : '#ccc';
+                        return '#2c7fb8';
+                    })
+                    .attr('opacity', currentColorMode === 'cluster' ? 0.85 : 0.75);
+
+                scatterYAxis.call(d3.axisLeft(yScale).ticks(6).tickFormat(d3.format('d')));
+                scatterYLabel.text(metricState.label + ' Rank');
+            }
         }
 
         function renderMetric() {
