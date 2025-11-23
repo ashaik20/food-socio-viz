@@ -45,7 +45,7 @@ The goal is to reveal how different regions’ nutrition levels relate to their 
    git clone https://github.com/ashaik20/food-socio-viz.git
    cd food-socio-viz
    ```
-2. Download the original food supply intake dataset from this [FAOStat link](https://bulks-faostat.fao.org/production/SUA_Crops_Livestock_E_All_Data.zip) and place the datatsets, specifically, `SUA_Crops_Livestock_E_All_Data_NOFLAG.csv`, within the `data` folder.
+2. Download the original food supply intake dataset from this [FAOStat link](https://bulks-faostat.fao.org/production/SUA_Crops_Livestock_E_All_Data.zip) and place the datasets, specifically, `SUA_Crops_Livestock_E_All_Data_NOFLAG.csv`, within the `data` folder.
 3. Setup a Conda environment from the project root and then activate it:
    ```
    conda env create -f environment.yml

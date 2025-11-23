@@ -658,7 +658,8 @@
                 const vals = Object.values(metricState.values).filter(v => v != null && !isNaN(v));
                 const extentVals = vals.length ? d3.extent(vals) : [0, 1];
                 const pad = (extentVals[1] - extentVals[0]) * 0.05;
-                yScale.domain([extentVals[1] + pad, Math.max(0, extentVals[0] - pad)]);
+                // domain [min - pad, max + pad] so axis reads ascending bottom -> top
+                yScale.domain([Math.max(0, extentVals[0] - pad), extentVals[1] + pad]);
 
                 scatterDots.transition().duration(600)
                     .attr('cx', d => xScale(d.gdp))
