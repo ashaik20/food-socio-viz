@@ -61,6 +61,9 @@ The goal is to reveal how different regions’ nutrition levels relate to their 
    ```
 2. Navigate to [http://[::1]:8000/global_food_nutrition.html](http://[::1]:8000/http://[::1]:8000/global_food_nutrition.html) from which the site will be visible
 
+## DEMO
+Here is an [installation guide video](https://youtu.be/oeUxUK0GoLk) to help through the process of setting up the website
+
 ## Data Sources
 
 - [FaoStat Database](https://www.fao.org/faostat/en/#data/SCL)
